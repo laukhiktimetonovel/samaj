@@ -1,0 +1,82 @@
+<div id="sidebar-container" class="min-w-[300px]">
+    <div id="skeleton-grid" class="">
+        <header class="flex items-center py-2 relative gap-3 px-4 h-[80px]">
+            <a href="{{ url('village-list.php') }}">
+                <img src="{{ asset('images/logo.png') }}" alt="લોગો" class="max-w-[65px]" />
+            </a>
+            <div class="text-left">
+                <h1 class="text-black font-bold text-[16px] leading-none pb-1.5">
+                    તળપદા કોળી પટેલ સમાજ
+                </h1>
+                <p class="text-black font-semibold text-sm leading-none">
+                    (કડવા પાટોદાર, બિલિયા)
+                </p>
+            </div>
+        </header>
+
+        <nav id="sidebar" class="grid grid-cols-3 md:grid-cols-2 gap-2 md:gap-4 p-4 min-w-[300px] md:max-h-[calc(100vh_-_80px)] md:overflow-y-auto">
+
+            <a href="{{ route('pariwarni.yadi') }}" data-match="village-list.php,family-book.php,family-members.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "pariwarni.yadi" ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/family-list.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">પરિવાર ની યાદી</span>
+            </a>
+
+            <a href="{{ route('board.index','board_members') }}" data-match="board-users.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "board.index" ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/board-users.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">મંડળના હોદ્દારોઃ</span>
+            </a>
+
+            <a href="{{ route('pages.snehmilan-information') }}" data-match="snehmilan-information.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "pages.snehmilan-information" ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/snehmilan-information.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">સ્નેહમિલનની માહિતી</span>
+            </a>
+
+            <a href="{{ route('pages.important-numbers') }}" data-match="important-numbers.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "pages.important-numbers" ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/important-numbers.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">અગત્યના નંબરો</span>
+            </a>
+
+            <a href="javascript:void(0);" onclick="alert('કાર્ય પ્રગતિમાં છે, જલ્દી જ આ ફીચર ઉમેરવામાં આવશે.');" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2">
+                <img src="{{ asset('images/icons/photo-gallery.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">ફોટો ગેલેરી</span>
+            </a>
+
+            <a href="javascript:void(0);" onclick="alert('કાર્ય પ્રગતિમાં છે, જલ્દી જ આ ફીચર ઉમેરવામાં આવશે.');" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2">
+                <img src="{{ asset('images/icons/marriage-related.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">લગ્ન વિષયક</span>
+            </a>
+
+            <a href="{{ route('mass-marriage-Information') }}" data-match="mass-marriage-Information.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "mass-marriage-Information" ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/mass-marriage-Information.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">સમુહલગ્નની માહિતી</span>
+            </a>
+
+            <a href="{{ route('village-history') }}" data-match="village-history.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "village-history" ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/village-history.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">ગામનો ઇતિહાસ</span>
+            </a>
+
+            <a href="{{ route('family.search') }}" data-match="search-user.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "family.search" ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/search-user.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">સભ્ય શોધો</span>
+            </a>
+
+            <a href="{{ route('login') }}" data-match="add-users.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ in_array(request()->route()->getName(),['login','family.profile','family.profile.editMain','family.child.create','family.child.edit']) ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/add-users.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">નવો સભ્ય ઉમેરો</span>
+            </a>
+
+            <a href="{{ route('members.report') }}" data-match="report-of-members.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "members.report" ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/report-of-members.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">સભ્યોની રિપોર્ટ</span>
+            </a>
+
+            <a href="{{ route('pages.help') }}" data-match="help.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "pages.help" ? 'page-active' : ''}}">
+                <img src="{{ asset('images/icons/board-users.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
+                <span class="sidebar-text">BilApp માર્ગદર્શિકા</span>
+            </a>
+
+        </nav>
+
+    </div>
+</div>
