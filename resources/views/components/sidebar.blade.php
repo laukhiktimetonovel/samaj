@@ -1,7 +1,7 @@
 <div id="sidebar-container" class="min-w-[300px]">
     <div id="skeleton-grid" class="">
         <header class="flex items-center py-2 relative gap-3 px-4 h-[80px]">
-            <a href="{{ url('village-list.php') }}">
+            <a href="{{ route('home') }}">
                 <img src="{{ asset('images/logo.png') }}" alt="લોગો" class="max-w-[65px]" />
             </a>
             <div class="text-left">
@@ -51,9 +51,9 @@
                 <span class="sidebar-text">સમુહલગ્નની માહિતી</span>
             </a>
 
-            <a href="{{ route('village-history') }}" data-match="village-history.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "village-history" ? 'page-active' : ''}}">
+            <a href="{{ route('pages.find-business') }}" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "pages.find-business" ? 'page-active' : ''}}">
                 <img src="{{ asset('images/icons/village-history.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
-                <span class="sidebar-text">ગામનો ઇતિહાસ</span>
+                <span class="sidebar-text">વ્યવસાય શોધો</span>
             </a>
 
             <a href="{{ route('family.search') }}" data-match="search-user.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "family.search" ? 'page-active' : ''}}">
@@ -75,6 +75,8 @@
                 <img src="{{ asset('images/icons/board-users.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
                 <span class="sidebar-text">BilApp માર્ગદર્શિકા</span>
             </a>
+
+            
 
         </nav>
 

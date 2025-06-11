@@ -38,6 +38,7 @@ Route::get('/snehmilan-information', [PageController::class, 'snehmilanInformati
 Route::get('/help', [PageController::class, 'help'])->name('pages.help');
 Route::get('/village-history', [PageController::class, 'villageHistory'])->name('village-history');
 Route::get('/mass-marriage-Information', [PageController::class, 'massMarriageInformation'])->name('mass-marriage-Information');
+Route::get('/find-business', [PageController::class, 'findBusiness'])->name('pages.find-business');
      
 Route::get('/family/login', [FamilyController::class, 'showLoginForm'])->name('login');
 Route::post('/family/login/otp', [FamilyController::class, 'sendOtp'])->name('family.login.sendOtp');

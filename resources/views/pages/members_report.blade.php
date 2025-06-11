@@ -15,58 +15,58 @@
             <div class="flex flex-wrap -m-2">
                 <div class="w-full xl:w-8/12 p-2">
                     <div class="bg-white shadow rounded-xl p-4">
-                        <h2 class="text-red-900 text-xl font-bold mb-4 mt-2">સભ્ય સંખ્યા</h2>
+                        <h2 class="text-[#575228] text-xl font-bold mb-4 mt-2">સભ્ય સંખ્યા</h2>
                         <div class="overflow-x-auto bg-white">
                             <table class="text-center min-w-full divide-y divide-gray-200">
                                 <thead>
                                     <tr>
-                                        <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400" rowspan="2">પરિવાર</th>
-                                        <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400" colspan="2">સભ્ય</th>
-                                        <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400" rowspan="2">કુલ સદસ્ય</th>
+                                        <th class="bg-[#bec33370] py-2 px-4 border border-gray-400" rowspan="2">પરિવાર</th>
+                                        <th class="bg-[#bec33370] py-2 px-4 border border-gray-400" colspan="2">સભ્ય</th>
+                                        <th class="bg-[#bec33370] py-2 px-4 border border-gray-400" rowspan="2">કુલ સદસ્ય</th>
                                     </tr>
                                     <tr>
-                                        <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400">પુરુષ</th>
-                                        <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400">સ્ત્રી</th>
+                                        <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">પુરુષ</th>
+                                        <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">સ્ત્રી</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-100 text-sm">
                                     @foreach($reportData as $village => $data)
                                         <tr>
-                                            <td class="font-bold bg-[#fff8ee] py-2 px-4 border-gray-300 border">{{ $village }}</td>
+                                            <td class="font-bold bg-[#f9d34436] py-2 px-4 border-gray-300 border">{{ $village }}</td>
                                             <td class="py-2 px-4 border-gray-300 border">{{ $data['male'] }}</td>
                                             <td class="py-2 px-4 border-gray-300 border">{{ $data['female'] }}</td>
-                                            <td class="font-bold bg-[#fff8ee] py-2 px-4 border-gray-300 border">{{ $data['total'] }}</td>
+                                            <td class="font-bold bg-[#f9d34436] py-2 px-4 border-gray-300 border">{{ $data['total'] }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <td class="py-2 px-4 border border-gray-300 bg-[antiquewhite] font-bold">કુલ</td>
-                                        <td class="py-2 px-4 border border-gray-300 bg-[antiquewhite] font-bold">
+                                        <td class="py-2 px-4 border border-gray-300 bg-[#bec33370s] font-bold">કુલ</td>
+                                        <td class="py-2 px-4 border border-gray-300 bg-[#bec33370s] font-bold">
                                             {{ array_sum(array_column($reportData, 'male')) }}
                                         </td>
-                                        <td class="py-2 px-4 border border-gray-300 bg-[antiquewhite] font-bold">
+                                        <td class="py-2 px-4 border border-gray-300 bg-[#bec33370s] font-bold">
                                             {{ array_sum(array_column($reportData, 'female')) }}
                                         </td>
-                                        <td class="py-2 px-4 border border-gray-300 bg-[antiquewhite] font-bold">{{ $grandTotalSadasy }}</td>
+                                        <td class="py-2 px-4 border border-gray-300 bg-[#bec33370s] font-bold">{{ $grandTotalSadasy }}</td>
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
-                        <p class="mt-6 mb-2 underline text-red-900 text-2xl font-bold text-center">કુલ સદસ્યોની સંખ્યા: {{ $grandTotalSadasy }}</p>
+                        <p class="mt-6 mb-2 underline text-[#575228] text-2xl font-bold text-center">કુલ સદસ્યોની સંખ્યા: {{ $grandTotalSadasy }}</p>
                     </div>
                 </div>
 
                 <div class="w-full xl:w-4/12 p-2">
                     <!-- Blood Group Chart -->
                     <div class="bg-white shadow rounded-xl p-4 mb-4">
-                        <h2 class="text-red-900 text-xl font-bold mb-4 mt-2">બ્લડગ્રુપ ચાર્ટ</h2>
+                        <h2 class="text-[#575228] text-xl font-bold mb-4 mt-2">બ્લડગ્રુપ ચાર્ટ</h2>
                         <table class="text-center min-w-full divide-y divide-gray-200">
                             <thead>
                                 <tr>
-                                    <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400">બ્લડગ્રુપ</th>
-                                    <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400">કુલ સંખ્યા</th>
-                                    <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400">ટકાવારી</th>
+                                    <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">બ્લડગ્રુપ</th>
+                                    <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">કુલ સંખ્યા</th>
+                                    <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">ટકાવારી</th>
                                 </tr>
                             </thead>
                             <tbody class="text-sm divide-y divide-gray-200">
@@ -83,13 +83,13 @@
 
                     <!-- Gender Ratio Chart -->
                     <div class="bg-white shadow rounded-xl p-4">
-                        <h2 class="text-red-900 text-xl font-bold mb-4 mt-2">સ્ત્રી - પુરુષ રેશિયો</h2>
+                        <h2 class="text-[#575228] text-xl font-bold mb-4 mt-2">સ્ત્રી - પુરુષ રેશિયો</h2>
                         <table class="w-full text-left border-t border-gray-200 mb-4">
                             <thead>
                                 <tr>
-                                    <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400">જાતિ</th>
-                                    <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400">કુલ સંખ્યા</th>
-                                    <th class="bg-[#b3541e4a] py-2 px-4 border border-gray-400">ટકાવારી</th>
+                                    <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">જાતિ</th>
+                                    <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">કુલ સંખ્યા</th>
+                                    <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">ટકાવારી</th>
                                 </tr>
                             </thead>
                             <tbody class="text-sm divide-y divide-gray-200">

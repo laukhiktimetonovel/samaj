@@ -30,4 +30,8 @@ class PageController extends Controller
     {
         return view('pages.snehmilan-information');
     }
+    public function findBusiness()
+    {
+        return view('pages.find-business');
+    }
 }
