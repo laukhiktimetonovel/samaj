@@ -22,7 +22,7 @@
     </form>
 
     {{-- Verify OTP --}}
-    <form action="{{ route('family.login.verify') }}" method="POST" class="space-y-2">
+    <form action="{{ route('family.login.verify') }}" method="POST" class="space-y-2 otp-form" style="display: none;">
       @csrf
       <label class="block text-gray-700 font-semibold">OTP નંબર દાખલ કરો:</label>
       <div class="flex flex-col sm:flex-row gap-3">
@@ -36,3 +36,16 @@
   </div>
 </div>
 @endsection
+@push('scripts')
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const otpForm = document.querySelector('.otp-form');
+    otpForm.style.display = 'none'; // Hide OTP form initially
+    const mobileInput = document.querySelector('input[name="mobile"]');
+
+    if( mobileInput.value) {
+      otpForm.style.display = 'block'; // Show OTP form if mobile number is already set
+    }
+  });
+</script>
+@endpush

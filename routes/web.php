@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BoardMemberController;
 use App\Http\Controllers\FamilyController;
 use App\Http\Controllers\MemberController;
@@ -15,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::resource('admin/members', MemberController::class)
      ->only(['index','create','store']);
 
-Route::get('/', [FamilyController::class, 'index'])->name('pariwarni.yadi');
+     
+Route::get('/banner', [BannerController::class, 'index'])->name('banner');
+Route::get('/banner/close', [BannerController::class, 'close'])->name('banner.close');
+
+Route::get('/', [FamilyController::class, 'index'])->name('home');
 
 Route::get('/family-book/{gam}', [FamilyController::class, 'show'])->name('family.book');
 Route::get('/family-members/{parent}', [FamilyController::class, 'familyMember'])->name('family.members');
