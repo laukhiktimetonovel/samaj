@@ -85,7 +85,7 @@ class FamilyController extends Controller
                         ->whereNull('parent_id')
                         ->first();
         if(!$member) {
-            return back()->withErrors(['mobile'=>'No main member found with this mobile']);
+            return back()->withErrors(['mobile'=>'આ મોબાઇલ નંબર ધરાવતો કોઈ સભ્ય મળ્યો નથી.']);
         }
 
         // generate & cache OTP for 5m
@@ -105,7 +105,7 @@ class FamilyController extends Controller
 
         Session::flash('mobile', $req->mobile);
         return redirect()->route('login')
-                         ->with('status','OTP sent to '.$req->mobile);
+                         ->with('status','કૃપા કરીને '.$req->mobile . ' માં ઓટીપી તપાસો.');
     }
 
     // Verify OTP
@@ -165,11 +165,12 @@ class FamilyController extends Controller
         $parent = Auth::guard('family')->user();
 
         $data = $request->validate([
+            'photo' => 'nullable',
             'full_name'        => 'required|string|max:255',
             'mobile'           => [
                 'nullable',
                 'string',
-                'max:20',
+                'digits:10',
                 // Custom validation to allow sharing within family but unique outside
                 function ($attribute, $value, $fail) use ($parent) {
                     $exists = Member::where('mobile', $value)
@@ -181,7 +182,7 @@ class FamilyController extends Controller
                         ->exists();
 
                     if ($exists) {
-                        $fail('The ' . $attribute . ' has already been taken by someone outside your family.');
+                        $fail($attribute . ' નંબર તમારા પરિવારની બહારના કોઈ વ્યક્તિ દ્વારા પહેલેથી જ ઉપયોગમાં લેવાયો છે.');
                     }
                 },
             ],
@@ -234,7 +235,7 @@ class FamilyController extends Controller
         $data = $request->validate([
             'relation'         => 'required|string',
             'full_name'        => 'required|string',
-            'mobile'           => 'nullable|string',
+            'mobile'           => 'nullable|string|digits:10',
             'birth_date'       => 'nullable|date',
             // 'village_name'     => 'nullable|string',
             // 'current_address'  => 'nullable|string',
@@ -278,7 +279,7 @@ class FamilyController extends Controller
         $data = $request->validate([
             'relation'         => 'required|string|max:50',
             'full_name'        => 'required|string|max:255',
-            'mobile'           => 'nullable|string|max:20',
+            'mobile'           => 'nullable|string|digits:10',
             'birth_date'       => 'nullable|date',
             // 'village_name'     => 'nullable|string|max:255',
             // 'current_address'  => 'nullable|string',

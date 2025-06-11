@@ -16,7 +16,7 @@
 
         <nav id="sidebar" class="grid grid-cols-3 md:grid-cols-2 gap-2 md:gap-4 p-4 min-w-[300px] md:max-h-[calc(100vh_-_80px)] md:overflow-y-auto">
 
-            <a href="{{ route('home') }}" data-match="village-list.php,family-book.php,family-members.php" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "home" ? 'page-active' : ''}}">
+            <a href="{{ route('home') }}" class="bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-2 px-2 {{ request()->route()->getName() == "home" ? 'page-active' : ''}}">
                 <img src="{{ asset('images/icons/family-list.svg') }}" alt="" class="max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
                 <span class="sidebar-text">પરિવાર ની યાદી</span>
             </a>

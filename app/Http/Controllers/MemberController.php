@@ -26,8 +26,10 @@ class MemberController extends Controller
             // 'parent_id' => 'nullable|exists:members,id',
             // 'sequence'  => 'required|integer|min:0',
             // 'relation'  => 'required|string',
+            'photo' => 'required',
             'full_name' => 'required|string',
-            'mobile'    => 'nullable|string|unique:members,mobile',
+            // 'village_name' => 'required|string',
+            'mobile'    => 'required|digits:10|unique:members,mobile',
             'birth_date'=> 'nullable|date',
             'business_name'    => 'nullable|string',
             'business_address' => 'nullable|string',
@@ -35,11 +37,13 @@ class MemberController extends Controller
             'blood_group'      => 'nullable|string',
             'gender'           => 'required|in:પુરુષ,સ્ત્રી,અન્ય',
             'marital_status'   => 'nullable|in:પરિણીત,અપરિણીત,ગંગા સ્વરૂપ,વિધુર,છૂટાછેડા,સગાઈ કરેલ છે.',
-            'father_husband_name' => 'nullable|string',
-            'surname_branch'      => 'nullable|string',
-            'village_name'        => 'nullable|string',
+            'mosal_name' => 'nullable|string',
+            'mosal_branch'      => 'nullable|string',
+            'mosal_village'      => 'nullable|string',
             'gam_select'          => 'nullable|string',
             'gam_other'           => 'nullable|string',
+            'village_address'     => 'nullable|string',
+            'current_address'     => 'nullable|string',
         ]);
 
         // choose village_name from dropdown or custom
@@ -50,7 +54,6 @@ class MemberController extends Controller
         // $data['village_name'] = "કિયાદરા";
 
         unset($data['gam_select'], $data['gam_other']);
-        
         // handle photo upload
         if ($request->hasFile('photo')) {
             // stores in storage/app/public/photos

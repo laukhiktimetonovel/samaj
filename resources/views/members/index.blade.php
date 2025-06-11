@@ -17,7 +17,6 @@
           <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Relation</th>
           <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Parent</th>
           <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Gam Name</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
         </tr>
       </thead>
       <tbody class="bg-white divide-y divide-gray-200">
@@ -29,10 +28,6 @@
               {{ $member->parent ? $member->parent->full_name : '—' }}
             </td>
             <td class="px-6 py-4 whitespace-nowrap">{{ $member->village_name ?? '—' }}</td>
-            <td class="px-6 py-4 whitespace-nowrap space-x-2">
-              <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-              <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
-            </td>
           </tr>
         @empty
           <tr>
