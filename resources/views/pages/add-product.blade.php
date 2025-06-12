@@ -52,7 +52,7 @@
         <!-- Product Selection Section -->
         <div id="product-container" class="space-y-4">
             <label class="block text-gray-700 font-semibold text-sm md:text-base">
-                    પાક નું નામ : (નોંધ -: --- પાક  પસંદ કરો ---લિસ્ટ માં ના આવે તો નવો પાક બટન દબાવી પાક ઉમેરવો)
+                    પાક નું નામ : (નોંધ -: પાક પસંદ કરો લિસ્ટ માં ના આવે તો નવો પાક બટન દબાવી પાક ઉમેરવો)
                 </label>
             <div class="product-row flex flex-col sm:flex-row gap-3 items-end">
                 <div class="flex-1 select-container">

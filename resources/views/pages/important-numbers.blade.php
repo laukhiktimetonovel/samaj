@@ -9,23 +9,23 @@
          
 
             <div class="bg-white shadow p-4 rounded-[12px]">
-                <h4 class="text-center text-lg font-semibold">પ્રકાશ વિદ્યાલય, બિલિયા</h4>
+                <h4 class="text-center text-lg font-semibold">પ્રકાશ વિદ્યાલય</h4>
                 <ul class="mt-4 space-y-4 list-disc list-outside pl-6">
                     <li>
                         <p>
-                            સુરેશભાઈ સુંઢિયા(આચાર્યશ્રી)
+                            પટેલ તનમેશભાઈ
                         </p>
                         <p class="text-[#B3541E] font-semibold"> મો:<img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/number_img/number_image4.png" class="inline-block max-w-[160px]" /></p>
                     </li>
                     <li>
                         <p>
-                            નાગરભાઈ એ. પટેલ(પ્રમુખશ્રી)
+                           પટેલ તનમેશભાઈ
                         </p>
                         <p class="text-[#B3541E] font-semibold"> મો:<img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/number_img/number_image4.png" class="inline-block max-w-[160px]" /></p>
                     </li>
                     <li>
                         <p>
-                            પરષોત્તમભાઈ બી. પટેલ(મંત્રીશ્રી)
+                            પટેલ તનમેશભાઈ
                         </p>
                         <p class="text-[#B3541E] font-semibold"> મો:<img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/number_img/number_image4.png" class="inline-block max-w-[160px]" /></p>
                     </li>
@@ -34,13 +34,13 @@
 
             <div class="bg-white shadow p-4 rounded-[12px]">
                 <h4 class="text-center text-lg font-semibold">
-                    પટેલ શાન્તાબેન ચેલારામ ભેમાત
-                    પ્રાથમિક શાળા, બિલિયા
+                  
+                 પ્રાથમિક શાળા
                 </h4>
                 <ul class="mt-4 space-y-4 list-disc list-outside pl-6">
                     <li>
                         <p>
-                            (આચાર્યશ્રી) ગૌસ્વામી પ્રવિણગીરી આઈ.
+                            (આચાર્યશ્રી) પટેલ તનમેશભાઈ
                         </p>
                         <p class="text-[#B3541E] font-semibold"> મો:<img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/number_img/number_image4.png" class="inline-block max-w-[160px]" /></p>
                     </li>
