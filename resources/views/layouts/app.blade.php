@@ -24,6 +24,7 @@
         @endif
         @yield('content')
     </div>
+@include('components.advataizment')
 
     <script src="{{ asset('js/script.js') }}"></script>
     @stack('scripts')
