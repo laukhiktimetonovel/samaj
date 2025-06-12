@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-   <div class="w-full lg:w-[calc(100%_-_270px)]">
+   <div class="w-full lg:w-[calc(100%_-_230px)]">
         <!-- Title -->
         <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
             {{ $gam }} પરિવાર
         </h2>
         <!-- Member list -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4">
+        <div class="grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4">
             @foreach($members as $m)
                 <a href="{{ route('family.members', $m) }}"
                    class="bg-white rounded-lg sm:rounded-2xl shadow p-2 sm:p-4 flex flex-col items-center text-center gap-3">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-   <div class="w-full lg:w-[calc(100%_-_270px)]">
+   <div class="w-full lg:w-[calc(100%_-_230px)]">
         <!-- Title -->
         <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
             શ્રી તળપદા કોળી પટેલ સમાજ સમૂહ લગ્ન સમિતિ
@@ -10,7 +10,7 @@
             <h2 class="w-max bg-[#faebd7] mb-[25px] mt-[45px] px-[11px] py-[11px] rounded-[5px] text-lg font-semibold ">
                 સમિતિ ના હોદેદારો</h2>
             <div>
-                <div id="memberGrid" class="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4"></div>
+                <div id="memberGrid" class="grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4"></div>
             </div>
         </div>
 

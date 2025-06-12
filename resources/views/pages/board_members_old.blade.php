@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="w-full lg:w-[calc(100%_-_270px)]">
+    <div class="w-full lg:w-[calc(100%_-_230px)]">
         <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
             {{-- Map your pageName to a readable title --}}
             તળપદા કોળી પટેલ સમાજ ના હોદ્દેદારો
         </h2>
-        <div id="memberGrid" class="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4">
+        <div id="memberGrid" class="grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4">
             @foreach($members as $member)
                 <div class="bg-white rounded-xl shadow p-2 sm:p-3 text-center flex flex-col gap-3 sm:gap-4">
                     <div class="w-full h-auto relative overflow-hidden">

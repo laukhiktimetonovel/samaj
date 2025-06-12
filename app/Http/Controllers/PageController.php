@@ -34,4 +34,12 @@ class PageController extends Controller
     {
         return view('pages.find-business');
     }
+     public function addProduct()
+    {
+        return view('pages.add-product');
+    }
+    public function productReport()
+    {
+        return view('pages.product-report');
+    }
 }

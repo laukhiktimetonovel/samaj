@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-   <div class="w-full lg:w-[calc(100%_-_270px)]">
+   <div class="w-full lg:w-[calc(100%_-_230px)]">
         <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
             તળપદા કોળી પટેલ સમાજ ના હોદ્દેદારો
         </h2>
         <div >
-            <div id="memberGrid" class="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4"></div> 
+            <div id="memberGrid" class="grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4"></div> 
         </div>
     </div>
 @endsection

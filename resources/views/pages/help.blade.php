@@ -13,17 +13,17 @@
             transition: max-height 0.5s ease-in-out;
         }
     </style>
-   <div class="w-full lg:w-[calc(100%_-_270px)]">
+   <div class="w-full lg:w-[calc(100%_-_230px)]">
         <!-- Title -->
         <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
-            BilApp માર્ગદર્શિકા
+            App માર્ગદર્શિકા
         </h2>
         <div class="mx-auto">
             <!-- Accordion Item -->
             <div class="cursor-pointer relative border border-gray-200 bg-white rounded-lg hover:shadow-sm hover:border-[#4B4B4B] mb-3 transition-all duration-500">
                 <button onclick="toggleAccordion(event)" class="cursor-pointer w-full flex justify-between items-center p-4 font-medium text-left">
                     <h3 class="w-full text-[18px] font-semibold text-gray-800 group-hover:text-[#4B4B4B] transition-colors duration-300">
-                        BilApp એન્ડ્રોઇડ મોબાઈલમાં કઈ રીતે ઇન્સ્ટોલ કરવી?
+                        App એન્ડ્રોઇડ મોબાઈલમાં કઈ રીતે ઇન્સ્ટોલ કરવી?
                     </h3>
                     <svg class="w-5 h-5 transform transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -58,7 +58,7 @@
             <div class="cursor-pointer relative border border-gray-200 bg-white rounded-lg hover:shadow-sm hover:border-[#4B4B4B] mb-3 transition-all duration-500">
                 <button onclick="toggleAccordion(event)" class="cursor-pointer w-full flex justify-between items-center p-4 font-medium text-left">
                     <h3 class="w-full text-[18px] font-semibold text-gray-800 group-hover:text-[#4B4B4B] transition-colors duration-300">
-                        BilApp એપલ(iPhone) મોબાઈલમાં કઈ રીતે ઇન્સ્ટોલ કરવી?
+                        App એપલ(iPhone) મોબાઈલમાં કઈ રીતે ઇન્સ્ટોલ કરવી?
                     </h3>
                     <svg class="w-5 h-5 transform transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -86,7 +86,7 @@
             <div class="cursor-pointer relative border border-gray-200 bg-white rounded-lg hover:shadow-sm hover:border-[#4B4B4B] mb-3 transition-all duration-500">
                 <button onclick="toggleAccordion(event)" class="cursor-pointer w-full flex justify-between items-center p-4 font-medium text-left">
                     <h3 class="w-full text-[18px] font-semibold text-gray-800 group-hover:text-[#4B4B4B] transition-colors duration-300">
-                        BilApp એપલઘરના સભ્યોની માહિતી BilApp માં કઈ રીતે ઉમેરવી કે સુધારવી?
+                        App એપલઘરના સભ્યોની માહિતી App માં કઈ રીતે ઉમેરવી કે સુધારવી?
                     </h3>
                     <svg class="w-5 h-5 transform transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

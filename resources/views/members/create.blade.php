@@ -12,7 +12,7 @@
 
 <body class="flex flex-col md:flex-row">
 
-    <div class="w-full lg:w-[calc(100%_-_270px)]">
+    <div class="w-full lg:w-[calc(100%_-_230px)]">
         @if (session('success'))
             <div class="bg-green-100 text-green-800 p-3 rounded mb-4">
                 {{ session('success') }}

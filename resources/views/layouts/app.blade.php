@@ -26,6 +26,7 @@
         
         @yield('content')
         @include('components.advataizment')
+        @include('components.mobileadvataizment')
       </div>
     </div>
     <script src="{{ asset('js/script.js') }}"></script>

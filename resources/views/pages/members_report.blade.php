@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-   <div class="w-full lg:w-[calc(100%_-_270px)]">
+   <div class="w-full lg:w-[calc(100%_-_230px)]">
         <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
             સભ્યોનો રિપોર્ટ
         </h2>
@@ -109,7 +109,7 @@
                         </tbody>
                     </table>
                     <p class="text-sm mb-2">→ ગામ માં દર 100 પુરુષો સામે {{ $genderRatio['ratio'] }} સ્ત્રીઓ છે.</p>
-                    <span>(BilApp માં હાજર માહિતી પરથી*)</span>
+                    <span>(App માં હાજર માહિતી પરથી*)</span>
                     <canvas id="genderPieChart" class="mx-auto" width="200" height="200"></canvas>
                 </div>
             </div>

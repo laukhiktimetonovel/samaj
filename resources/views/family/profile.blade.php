@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-full lg:w-[calc(100%_-_270px)]">
+<div class="w-full lg:w-[calc(100%_-_230px)]">
 
   <div class="flex items-center justify-between">
     <h2 class="font-semibold text-2xl mb-4">પ્રોફાઇલ સેટિંગ્સ</h2>

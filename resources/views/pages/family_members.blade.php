@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-full lg:w-[calc(100%_-_270px)]">
+<div class="w-full lg:w-[calc(100%_-_230px)]">
     <!-- Profile Card -->
     <div class="bg-white p-4 md:p-6 shadow rounded-xl grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
         <!-- Image -->
