@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-             <div class="py-4 md:py-6 w-full px-4 md:min-h-screen md:max-h-screen md:overflow-y-auto">
-                <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
-                    શ્રી બિલેશ્વર યુવક મંડળ ના હોદ્દેદારો
-                </h2>
-                <div >
-                    <div id="memberGrid" class="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4"></div> 
-                </div>
-            </div>
+   <div class="w-full lg:w-[calc(100%_-_270px)]">
+        <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
+            તળપદા કોળી પટેલ સમાજ ના હોદ્દેદારો
+        </h2>
+        <div >
+            <div id="memberGrid" class="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-2 sm:gap-4"></div> 
+        </div>
+    </div>
 @endsection
 @push('scripts')
         <script>

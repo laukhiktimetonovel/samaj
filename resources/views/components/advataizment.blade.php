@@ -1,6 +1,5 @@
-<div id="" class="min-w-[300px]">
-   <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="w-[200px] bg-white shadow-lg rounded-lg overflow-hidden">
+<div id="" class="w-full lg:w-[270px] pt-6 lg:pl-4">
+    <div class="w-full bg-white shadow-lg rounded-lg overflow-hidden mx-auto">
         <!-- Ad Header -->
         <div class="bg-blue-600 text-white text-center py-2">
             <h3 class="text-sm font-bold">Sponsored Ad</h3>
@@ -18,5 +17,4 @@
             <a href="#" class="inline-block mt-1 bg-blue-500 text-white text-xs px-3 py-1 rounded hover:bg-blue-600">Shop Now</a>
         </div>
     </div>
-</body>
 </div>

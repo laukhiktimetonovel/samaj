@@ -12,7 +12,7 @@
 
 <body class="flex flex-col md:flex-row">
 
-    <div class="py-4 md:py-6 w-full px-4 md:min-h-screen md:overflow-y-auto">
+    <div class="w-full lg:w-[calc(100%_-_270px)]">
         @if (session('success'))
             <div class="bg-green-100 text-green-800 p-3 rounded mb-4">
                 {{ session('success') }}
@@ -22,7 +22,7 @@
             સભ્ય ની માહિતી સુધારો
         </h2>
 
-        <div class="bg-white shadow p-4 rounded-[12px] mt-6 p-8">
+        <div class="bg-white shadow rounded-[12px] mt-6 p-8">
             <form action="{{ route('members.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 

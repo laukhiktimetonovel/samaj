@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py-4 md:py-6 w-full px-4 md:min-h-screen md:overflow-y-auto">
+<div class="w-full lg:w-[calc(100%_-_270px)]">
   <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">નવો સભ્ય ઉમેરો</h2>
   <div class="max-w-xl space-y-4">
     @if(session('status'))

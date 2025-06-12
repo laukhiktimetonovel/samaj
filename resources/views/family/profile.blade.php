@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py-4 md:py-6 w-full px-4 md:min-h-screen md:overflow-y-auto">
+<div class="w-full lg:w-[calc(100%_-_270px)]">
 
   <div class="flex items-center justify-between">
     <h2 class="font-semibold text-2xl mb-4">પ્રોફાઇલ સેટિંગ્સ</h2>
@@ -15,7 +15,7 @@
   </div>
 
   {{-- Main Member Edit Card --}}
-  <div class="bg-white rounded-[12px] p-4 md:p-4 flex flex-col gap-2 border border-gray-200  flex flex-row justify-between items-center">
+  <div class="bg-white rounded-[12px] p-4 md:p-4 flex flex-col gap-2 border border-gray-200 justify-between items-center">
     <div>
       <span class="text-[#B3541E] font-semibold">મુખ્ય સભ્ય ની માહિતી સુધારો</span>
       <div class="flex items-center gap-2 mt-1">
@@ -56,7 +56,7 @@
     @csrf
     <div id="gridContainer" class="grid grid-cols-1 gap-4">
       @foreach($children as $child)
-        <div class="bg-white rounded-[12px] p-4 md:p-4 border border-gray-200 cursor-pointer cursor-move" draggable="true" data-id="{{ $child->id }}">
+        <div class="bg-white rounded-[12px] p-4 md:p-4 border border-gray-200 cursor-move" draggable="true" data-id="{{ $child->id }}">
           <p class="text-[#B3541E] font-semibold">{{ $child->full_name }}</p>
         </div>
       @endforeach
