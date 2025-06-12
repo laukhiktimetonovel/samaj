@@ -44,7 +44,7 @@
                          <span class="w-[100px] text-[#B3541E] font-semibold">  મો. નંબર  :- </span><p > 985282560</p>
                         </div>
                         <div class="flex">
-                         <span class="w-[100px] text-[#B3541E] font-semibold">   શરનામું :- </span><p> asa asas sas s as</p> 
+                         <span class="w-[100px] text-[#B3541E] font-semibold">   સરનામું :- </span><p> asa asas sas s as</p> 
                         </div>
                         <div class="flex">
                         <span class="w-[100px] text-[#B3541E] font-semibold">  પાક નું નામ :- </span>  <p>બટાકા </p>
@@ -62,7 +62,7 @@
                          <span class="w-[100px] text-[#B3541E] font-semibold">  મો. નંબર  :- </span><p > 985282560</p>
                         </div>
                         <div class="flex">
-                         <span class="w-[100px] text-[#B3541E] font-semibold">   શરનામું :- </span><p> asa asas sas s as</p> 
+                         <span class="w-[100px] text-[#B3541E] font-semibold">   સરનામું :- </span><p> asa asas sas s as</p> 
                         </div>
                         <div class="flex">
                         <span class="w-[100px] text-[#B3541E] font-semibold">  પાક નું નામ :- </span>  <p>બટાકા </p>
@@ -80,7 +80,7 @@
                          <span class="w-[100px] text-[#B3541E] font-semibold">  મો. નંબર  :- </span><p > 985282560</p>
                         </div>
                         <div class="flex">
-                         <span class="w-[100px] text-[#B3541E] font-semibold">   શરનામું :- </span><p> asa asas sas s as</p> 
+                         <span class="w-[100px] text-[#B3541E] font-semibold">   સરનામું :- </span><p> asa asas sas s as</p> 
                         </div>
                         <div class="flex">
                         <span class="w-[100px] text-[#B3541E] font-semibold">  પાક નું નામ :- </span>  <p>બટાકા </p>
@@ -88,7 +88,7 @@
                     </div>
             </div>
 
-            
+
         </div>
     </div>
 </div>

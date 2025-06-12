@@ -38,9 +38,9 @@
                 <ul class="mt-4 space-y-4 list-disc list-outside pl-6">
                     <li>
                         <p>
-                            ગૌસ્વામી પ્રવિણગીરી આઈ.
+                            ગૌસ્વામી પ્રવિણગીરી 
                         </p>
-                        <p class="text-[#B3541E] font-semibold"> મો:- 985282560</p>
+                        <p class="text-[#B3541E] font-semibold"> મો:- 856965452</p>
                     </li>
                 </ul>
             </div>
@@ -50,9 +50,9 @@
                 <ul class="mt-4 space-y-4 list-disc list-outside pl-6">
                     <li>
                         <p>
-                            ચૌધરી દિલીપભાઈ
+                           ગૌસ્વામી પ્રવિણગીરી
                         </p>
-                        <p class="text-[#B3541E] font-semibold"> મો:- 8965893595</p>
+                        <p class="text-[#B3541E] font-semibold"> મો:- 856965452</p>
                     </li>
                 </ul>
             </div>
@@ -62,9 +62,9 @@
                 <ul class="mt-4 space-y-4 list-disc list-outside pl-6">
                     <li>
                         <p>
-                            દેસાઈ મનીષાબેન
+                           ગૌસ્વામી પ્રવિણગીરી
                         </p>
-                        <p class="text-[#B3541E] font-semibold"> મો:- 6589245865</p>
+                        <p class="text-[#B3541E] font-semibold"> મો:- 856965452</p>
                     </li>
                 </ul>
             </div>  

@@ -22,25 +22,25 @@
                 <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-200">
 
                     <p class="text-[#B3541E] md:text-xl font-semibold">
-                        શ્રી પટેલ માઘવલાલ રામજીદાસ ગાંમી
+                        શ્રી પટેલ માઘવલાલ રામજીદાસ 
                     </p>
                 </div>
                 <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-200">
 
                     <p class="text-[#B3541E] md:text-xl font-semibold">
-                        શ્રી પટેલ રતિલાલ જીવરામદાસ વરવાડીયા
+                        શ્રી પટેલ માઘવલાલ રામજીદાસ 
                     </p>
                 </div>
                 <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-200">
 
                     <p class="text-[#B3541E] md:text-xl font-semibold">
-                        શ્રી પટેલ હીરાલાલ ઈશ્વરલાલ વરવાડીયા
+                       શ્રી પટેલ માઘવલાલ રામજીદાસ 
                     </p>
                 </div>
                 <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-200">
 
                     <p class="text-[#B3541E] md:text-xl font-semibold">
-                        શ્રી પટેલ ચેલારામ નારાયણદાસ પાંચોટીયા
+                       શ્રી પટેલ માઘવલાલ રામજીદાસ 
                     </p>
                 </div>
             </div> 
@@ -87,11 +87,11 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
             <div class="bg-white shadow p-4 rounded-[12px]">
-                <h4 class="text-center text-lg font-semibold">બિલિયા ગ્રામ પંચાયત</h4>
+                <h4 class="text-center text-lg font-semibold">તળપદા ગ્રામ પંચાયત</h4>
                 <ul class="mt-4 space-y-4 list-disc list-outside pl-6">
                     <li>
                         <p>
-                            બિલિયા:
+                            તળપદા :
                         </p>
                         <p class="text-[#B3541E] font-semibold"> મો:<img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/number_img/number_image1.png" class="inline-block max-w-[160px]" /></p>
                     </li>
@@ -130,69 +130,70 @@
         const members = [{
                 name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
                 role: "(પ્રમુખશ્રી)",
-                phone: "૯૮૨૫૧૨૧૮૦૮",
-                image: "img1.jpg",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ ગોપાળભાઈ ભગવાનભાઈ કિયાદરા",
-                role: "(ઉપ પ્રમુખશ્રી)",
-                phone: "૯૮૨૫૦૬૩૬૦૦",
-                image: "img2.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ રસિકભાઈ ગણેશભાઈ વરવાડીયા",
-                role: "(મંત્રીશ્રી)",
-                phone: "૯૩૭૪૭૨૫૪૩૫",
-                image: "img3.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ રસિકભાઈ છગનભાઈ પેપડીયા",
-                role: "(ખજાનચી)",
-                phone: "૯૮૨૫૧૨૮૮૨૬",
-                image: "img4.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ રમેશભાઈ મણિલાલ મોખાત",
-                role: "(ઓડિટર)",
-                phone: "૯૮૨૫૧૪૫૮૪૨",
-                image: "img5.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ સુરેશભાઈ અંબારામભાઈ મહેરવાડીયા",
-                role: "(કારોબારી સભ્ય)",
-                phone: "૯૮૨૫૪૪૦૫૨૫",
-                image: "img6.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ સુરેશભાઈ ચેલારામભાઈ સિધ્ધપુરા",
-                role: "(કારોબારી સભ્ય)",
-                phone: "૯૮૨૫૧૨૧૩૧૦",
-                image: "img7.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ ભરતભાઈ વીરાભાઇ હજારી",
-                role: "(કારોબારી સભ્ય)",
-                phone: "૯૩૭૬૯૭૪૦૬૩",
-                image: "img8.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ અમરતભાઈ નારાયણભાઈ પાંચોટિયા",
-                role: "(કારોબારી સભ્ય)",
-                phone: "૯૮૭૯૮૮૬૬૩૬",
-                image: "img9.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ ભરતભાઈ ગણેશભાઈ કિયાદરા",
-                role: "(કારોબારી સભ્ય)",
-                phone: "૯૪૨૬૧૪૯૯૪૫",
-                image: "img10.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
             {
-                name: "પટેલ રાકેશભાઈ ત્રિભોવનભાઈ નુંગરા",
-                role: "(કારોબારી સભ્ય)",
-                phone: "૯૯૭૯૯૬૬૪૯૯",
-                image: "img11.jpg",
+                name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                role: "(પ્રમુખશ્રી)",
+                phone: "7896589625",
+                image: "{{ asset('images/user-place.webp') }}",
             },
+            
         ];
         const container = document.getElementById("memberGrid");
 
@@ -201,7 +202,7 @@
                 <div class="bg-white rounded-xl shadow p-2 sm:p-3 text-center flex flex-col gap-3 sm:gap-4">
                     <div class="w-full h-auto relative overflow-hidden">
                         <div class="relative overflow-hidden w-full block h-full pt-[100%]  border-gray-100 rounded-xl">
-                            <img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/hodedar/${member.image}" class="absolute h-full w-full object-contain left-0 top-0" loading="lazy" alt="${member.name}" />
+                            <img src="${member.image}" class="absolute h-full w-full object-contain left-0 top-0" loading="lazy" alt="${member.name}" />
                         </div>
                     </div>
                     <div class="flex-col gap-1 flex flex-1">

@@ -38,13 +38,13 @@
         <!-- Address Input -->
         <div>
             <label class="block text-gray-700 font-semibold text-sm md:text-base">
-                શરનામું :
+                સરનામું :
             </label>
             <input
                 type="text"
                 name="address"
                 value=""
-                placeholder="તમારુ નામ શરનામું કરો"
+                placeholder="તમારુ નામ સરનામું કરો"
                 class="w-full px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]"
             />
         </div>

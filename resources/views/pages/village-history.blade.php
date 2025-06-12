@@ -6,7 +6,7 @@
             <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
                 ગામનો ઇતિહાસ
             </h2>
-            <div>
+            {{-- <div>
                 <div class="flex items-center gap-4">
                     <div class="max-w-[120px] min-w-[100px]"><img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/img/guru_maharaj.png" class="w-full" /></div>
                     <div class="max-w-[700px]">
@@ -112,7 +112,7 @@
                 </p>
                 <p class="text-justify mb-4 font-medium">આ ગામ એકંદરે સમૃધ્ધ અને સુખી છે, ગામનો વિકાસ અને પ્રગતિ સારી છે. આ ગામમાં જન્મ થવો એક સદભાગ્યની નિશાની છે. એવું રૂડું રૂપાળું મારૂ ગામ <strong>“બિલિયા”</strong> છે.</p>
                 <h4 class="text-center mt-10 underline text-red-900 text-2xl font-bold">શ્રી કષ્ટભંજનદેવ ની જય!</h4>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection
