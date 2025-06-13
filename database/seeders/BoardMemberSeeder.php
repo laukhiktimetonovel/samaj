@@ -15,7 +15,7 @@ class BoardMemberSeeder extends Seeder
     {
         $data = [
             [
-                'name'=>'પટેલ અમૃતલાલ જોઈતારામ સાંગડોત',
+                'name'=>' પટેલ અમૃતલાલ જોઈતારામ',
                 'role'=>'(પ્રમુખશ્રી)',
                 'phone'=>'૯૮૨૫૧૨૧૮૦૮',
                 'image'=>'img1.jpg',

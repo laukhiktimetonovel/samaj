@@ -1,21 +1,79 @@
 <div id="" class="order-[-1] hidden md:block md:order-none w-full lg:w-[230px] pb-5 md:pb-0 lg:pl-4">
-    <!-- Ad Header -->
-    <div class=" text-black text-center py-2">
-      <h3 class="text-sm font-bold">Sponsored Ads *</h3>
+   <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 3px;
+            background: #ffffff;
+            border-radius: 0;
+            opacity: 0.5;
+        }
+        .swiper-pagination-bullet-active {
+            background: #ffffff;
+            opacity: 1;
+        }
+        body .swiper-pagination {
+            position: absolute;
+            bottom: -3px    ;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding-top: 2px;
+        }
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+}
+    </style>
+  <!-- Full-Width Container -->
+    <div class="w-full max-w-full order-[-1]  pb-5 md:order-none ">
+        <!-- Ad Banner (Centered, 200px width) -->
+       <div class=" text-black text-center py-2">
+      <h3 class="text-sm font-bold">જાહેરાત *</h3>
     </div>
-  <div class="w-full  shadow-lg rounded-lg overflow-hidden mx-auto">
-    
-    <!-- Image Grid: mobile पर 3 कॉलम, lg पर 1 कॉलम -->
-    <div class="grid grid-cols-3 gap-1 p-1 lg:grid-cols-1">
-      <a href="">
-        <img src="{{ asset('images/einvite.png') }}" alt="Ad 1" class="w-full object-cover rounded">
-      </a>
-      <a href="">
-        <img src="{{ asset('images/inneradd1.png') }}" alt="Ad 2" class="w-full object-cover rounded">
-      </a>
-      <a href="">
-        <img src="{{ asset('images/inneradd2.png') }}" alt="Ad 3" class="w-full object-cover rounded">
-      </a>
+        <div class=" bg-white shadow-lg rounded-lg overflow-hidden">
+            
+            <!-- Ad Header -->
+            <!-- Slider -->
+            <div class="swiper-container relative">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="">
+                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                        <img src="{{ asset('images/160 × 600 (1).png') }}" alt="Ad 2" class="w-full object-cover">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 3" class="w-full object-cover">
+                        </a>
+                    </div>
+                </div>
+                <!-- Pagination (Dashes Above Slider) -->
+                <div class="swiper-pagination"></div>
+            </div>
+           
+        </div>
     </div>
-  </div>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'bullets',
+            },
+        });
+    </script>
+
 </div>

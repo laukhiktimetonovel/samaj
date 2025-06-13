@@ -33,19 +33,19 @@
                     <div class="accordion-body pb-3">
                         <ol class="mt-4 list-decimal list-inside space-y-4 text-gray-800">
                             <li>
-                                સૌથી પહેલાં <b>ગૂગલ ક્રોમ</b> Browser માં <b>bileshwarsurat.com</b> લિંક ખોલો.<br />
-                                <img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/img/img1.png" alt="logo" class="col-md-4 col-10 d-inline-block help-img" />
+                                સૌથી પહેલાં <b>ગૂગલ ક્રોમ</b> Browser માં <b>talpadakolipatelsamaj.com</b> લિંક ખોલો.<br />
+                                <img src="{{ asset('images/appss.png') }}" alt="logo" class="col-md-4 col-10 d-inline-block help-img" />
                             </li>
                             <li>
                                 વેબસાઇટ ખુલી જાય ત્યારે browser ની જમણી બાજુ ઉપર ત્રણ ટપકા પર ક્લિક કરી menu ખોલો.<br />
-                                <img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/img/img2.png" alt="logo" class="d-inline-block help-img" />
+                                <img src="{{ asset('images/appss.png') }}" alt="logo" class="d-inline-block help-img" />
                             </li>
                             <li>
                                 નવા લેટેસ્ટ browser મા "Add to Home screen" ઓપ્શન હશે તેના પર ક્લિક કરો, ત્યાર બાદ 2 ઓપ્શન આવશે તેમાંથી "Install" ઓપ્શન પર ક્લિક કરો. જો ફરીથી "Install" બટન દેખાય તો ફરીથી ક્લિક કરવું. એપ્લિકેશન
                                 જાતે ઇન્સ્ટોલ થઈ જશે.<br />
-                                <img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/img/img3.png" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
-                                <img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/img/img5.png" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
-                                <img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/img/img4.png" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
+                                <img src="{{ asset('images/appss.png') }}" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
+                                <img src="{{ asset('images/appss.png') }}" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
+                                <img src="{{ asset('images/appss.png') }}" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
                             </li>
                         </ol>
                         <br />
@@ -67,15 +67,15 @@
                 <div class="accordion-content trans px-4 text-gray-700">
                     <div class="accordion-body">
                         <ol class="mt-4 list-decimal list-inside space-y-4 text-gray-800">
-                            <li><b>સફારી</b> Browser મા <b>bileshwarsurat.com</b> વેબસાઇટ ખોલો.</li>
+                            <li><b>સફારી</b> Browser મા <b>talpadakolipatelsamaj.com</b> વેબસાઇટ ખોલો.</li>
                             <li>
                                 વેબસાઇટ ખુલી જાય ત્યારે browser ની નીચે આવેલા શેર બટન પર ક્લિક કરો અને ત્યારબાદ "Add to Home screen" પર ક્લિક કરો.<br />
-                                <img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/img/img6.jpg" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
-                                <img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/img/img7.png" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
+                                <img src="{{ asset('images/appss.png') }}" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
+                                <img src="{{ asset('images/appss.png') }}" alt="logo" class="col-md-2 col-6 d-inline-block help-img" />
                             </li>
                             <li>
                                 ત્યારબાદ "Add" બટન પર ક્લિક કરો. એપ્લિકેશન ઇન્સ્ટોલ થઈ જશે.<br />
-                                <img src="https://ctxfealcva.cloudimg.io/bileshwarsurat.com/assets/img/img8.png" alt="logo" class="col-md-2 col-8 d-inline-block help-img" />
+                                <img src="{{ asset('images/appss.png') }}" alt="logo" class="col-md-2 col-8 d-inline-block help-img" />
                             </li>
                         </ol>
                     </div>
@@ -121,8 +121,8 @@
                                         </li>
                                         <li>
                                             જે સભ્યની માહિતીમાં સુધારો કરવો હોય તેના નામની સામે આવેલા
-                                            <button class="inline-flex items-center p-[2px] bg-gray-100 rounded hover:bg-gray-200">
-                                                <img src="assets/icons/pensil.svg" alt="Edit" class="w-4 h-4" />
+                                            <button class="inline-flex items-center p-[2px] bg-gray-100 rounded hover:bg-gray-200 cursor-pointer">
+                                                <img src="{{ asset('images/icons/edti-help.svg') }}" alt="Edit" class="w-4 h-4" />
                                             </button>
                                             પેન્સિલ જેવા બટન પર ક્લિક કરો.
                                         </li>

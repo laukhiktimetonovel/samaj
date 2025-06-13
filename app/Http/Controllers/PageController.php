@@ -42,4 +42,8 @@ class PageController extends Controller
     {
         return view('pages.product-report');
     }
+     public function matrimonyReport()
+    {
+        return view('pages.matrimony');
+    }
 }

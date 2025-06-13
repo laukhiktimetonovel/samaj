@@ -29,7 +29,7 @@
     <div class="w-full max-w-full order-[-1] block md:hidden pb-5 md:order-none ">
         <!-- Ad Banner (Centered, 200px width) -->
        <div class=" text-black text-center py-2">
-      <h3 class="text-sm font-bold">Sponsored Ads *</h3>
+      <h3 class="text-sm font-bold">જાહેરાત  *</h3>
     </div>
         <div class=" bg-white shadow-lg rounded-lg overflow-hidden">
             

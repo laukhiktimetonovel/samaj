@@ -14,53 +14,53 @@
         <script>
             const members = [
                 {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",
                 },
                  {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",
                 }, {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",
                 }, {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",
                 }, {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",
                 }, {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",
                 }, {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",
                 }, {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",
                 }, {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",
                 }, {
-                    name: "પટેલ અમૃતલાલ જોઈતારામ સાંગડોત",
+                    name: " પટેલ અમૃતલાલ જોઈતારામ",
                     role: "(પ્રમુખશ્રી)",
                     phone: "9998569852",
                    image: "{{ asset('images/user-place.webp') }}",

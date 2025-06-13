@@ -41,6 +41,7 @@ Route::get('/mass-marriage-Information', [PageController::class, 'massMarriageIn
 Route::get('/find-business', [PageController::class, 'findBusiness'])->name('pages.find-business');
 Route::get('/add-product', [PageController::class, 'addProduct'])->name('pages.add-product');
 Route::get('/product-report', [PageController::class, 'productReport'])->name('pages.product-report');
+Route::get('/matrimony', [PageController::class, 'matrimonyReport'])->name('pages.matrimony');
      
 Route::get('/family/login', [FamilyController::class, 'showLoginForm'])->name('login');
 Route::post('/family/login/otp', [FamilyController::class, 'sendOtp'])->name('family.login.sendOtp');
