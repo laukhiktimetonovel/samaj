@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Advertisement;
 use App\Models\Member;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -23,7 +24,8 @@ class FamilyController extends Controller
             ->orderBy('village_name')
             ->get();
 
-        return view('pages.pariwarni-yadi', compact('gams'));
+        $advertisements = Advertisement::where('is_active', true)->get();
+        return view('pages.pariwarni-yadi', compact('gams', 'advertisements'));
     }
 
     // Show all members of one gam

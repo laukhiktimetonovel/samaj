@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Member;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -42,8 +43,40 @@ class PageController extends Controller
     {
         return view('pages.product-report');
     }
-     public function matrimonyReport()
+    public function matrimonyReport(Request $request)
     {
-        return view('pages.matrimony');
+        $parents = null;
+
+        // Check if form is submitted (any filter is present)
+        if ($request->filled(['search'])) {
+            $parents = Member::whereNull('parent_id') // Parents only
+                ->whereHas('children', function ($query) use ($request) {
+                    $query->marriageEligible(); // Unmarried or divorced
+                    if ($request->filled('age_from')) {
+                        $query->where('birth_date', '<=', now()->subYears($request->age_from));
+                    }
+                    if ($request->filled('age_to')) {
+                        $query->where('birth_date', '>=', now()->subYears($request->age_to + 1));
+                    }
+                    if ($request->filled('gender')) {
+                        $query->where('gender', $request->gender);
+                    }
+                })
+                ->with(['children' => function ($query) use ($request) {
+                    $query->marriageEligible();
+                    if ($request->filled('age_from')) {
+                        $query->where('birth_date', '<=', now()->subYears($request->age_from));
+                    }
+                    if ($request->filled('age_to')) {
+                        $query->where('birth_date', '>=', now()->subYears($request->age_to + 1));
+                    }
+                    if ($request->filled('gender')) {
+                        $query->where('gender', $request->gender);
+                    }
+                }])
+                ->get();
+        }
+
+        return view('pages.matrimony', compact('parents'));
     }
 }

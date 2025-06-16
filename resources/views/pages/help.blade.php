@@ -9,7 +9,7 @@
         }
 
         .accordion-content.open {
-            max-height: 500px; /* Adjust as per content */
+            max-height: 5000px; /* Adjust as per content */
             transition: max-height 0.5s ease-in-out;
         }
     </style>

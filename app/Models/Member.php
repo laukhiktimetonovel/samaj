@@ -53,4 +53,13 @@ class Member extends Authenticatable
         // If photo_url is empty, return a default placeholder image
         return $value ? asset("storage/{$value}") : asset('images/default_member_photo.png');
     }
+    public function getAgeAttribute()
+    {
+        return $this->birth_date ? \Carbon\Carbon::parse($this->birth_date)->age : null;
+    }
+
+    public function scopeMarriageEligible($query)
+    {
+        return $query->whereIn('marital_status', ['અપરિણીત', 'છૂટાછેડા']);
+    }
 }

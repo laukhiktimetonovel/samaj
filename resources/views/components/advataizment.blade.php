@@ -38,21 +38,21 @@
             <!-- Slider -->
             <div class="swiper-container relative">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    @php
+                        $advertisements = get_advertisements();
+                    @endphp
+                    @foreach($advertisements as $ad)
+                        <div class="swiper-slide">
+                            <a href="{{ $ad->url ?? 'javascipt:void(0);' }}">
+                                <img src="{{ asset($ad->image_path) }}" alt="{{ $ad->title ?? 'Advertisement' }}" class="w-full object-cover">
+                            </a>
+                        </div>
+                    @endforeach
+                    {{-- <div class="swiper-slide">
                         <a href="">
                         <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
                         </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="">
-                        <img src="{{ asset('images/160 × 600 (1).png') }}" alt="Ad 2" class="w-full object-cover">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="">
-                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 3" class="w-full object-cover">
-                        </a>
-                    </div>
+                    </div> --}}
                 </div>
                 <!-- Pagination (Dashes Above Slider) -->
                 <div class="swiper-pagination"></div>
