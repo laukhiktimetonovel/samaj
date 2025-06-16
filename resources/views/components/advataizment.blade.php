@@ -38,7 +38,7 @@
             <!-- Slider -->
             <div class="swiper-container relative">
                 <div class="swiper-wrapper">
-                    @php
+                    {{-- @php
                         $advertisements = get_advertisements();
                     @endphp
                     @foreach($advertisements as $ad)
@@ -47,12 +47,27 @@
                                 <img src="{{ asset($ad->image_path) }}" alt="{{ $ad->title ?? 'Advertisement' }}" class="w-full object-cover">
                             </a>
                         </div>
-                    @endforeach
-                    {{-- <div class="swiper-slide">
+                    @endforeach --}}
+                    <div class="swiper-slide">
                         <a href="">
                         <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
                         </a>
-                    </div> --}}
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
+                        </a>
+                    </div>
                 </div>
                 <!-- Pagination (Dashes Above Slider) -->
                 <div class="swiper-pagination"></div>
