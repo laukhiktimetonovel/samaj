@@ -57,3 +57,43 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.log('Service Worker registration failed:', err));
   });
 }
+
+// Check if device is mobile
+const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
+
+// Handle mobile menu clicks
+document.querySelectorAll('.page-menu').forEach(link => {
+  link.addEventListener('click', e => {
+    if (!isMobile()) return;
+    e.preventDefault();
+    const url = new URL(link.href);
+    url.searchParams.set('scrollToMain', 'true');
+    location.href = url.toString();
+  });
+});
+
+// Scroll to main content on load if param set
+window.addEventListener('load', () => {
+  if (isMobile() && new URLSearchParams(location.search).get('scrollToMain') === 'true') {
+    document.querySelector('.main-content')?.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
+// Swiper config generator
+const initSwiper = selector => {
+  new Swiper(selector, {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      type: 'bullets',
+    },
+  });
+};
+
+// Initialize swipers
+['.mobile-ads', '.desktop-ads'].forEach(initSwiper);

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-full lg:w-[calc(100%_-_230px)]">
-        <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
             ખેડૂત વિષયક 
         </h2>
         <div class="max-w-xl space-y-4">
@@ -55,11 +55,11 @@
                     પાક નું નામ : (નોંધ -: પાક પસંદ કરો લિસ્ટ માં ના આવે તો નવો પાક બટન દબાવી પાક ઉમેરવો)
                 </label>
             <div class="product-row flex flex-col sm:flex-row gap-3 items-end">
-                <div class="flex-1 select-container">
+                <div class="flex-1 select-container w-full">
                     
                     <select
                         name="product[]"
-                        class="w-full px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]"
+                        class="select-option w-full px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]"
                     >
                         <option value="" disabled selected>--- પાક  પસંદ કરો ---</option>
                         <option value="product1">Product 1</option>
@@ -103,7 +103,8 @@
                 
         </div>
     </div>
-
+@endsection
+@push('scripts')
     <script>
         function addProductRow() {
             const container = document.getElementById('product-container');
@@ -117,13 +118,13 @@
             const newRow = document.createElement('div');
             newRow.className = 'product-row flex flex-col sm:flex-row gap-3 items-end';
             newRow.innerHTML = `
-                <div class="flex-1 select-container">
+                <div class="flex-1 select-container w-full">
                     <label class="block text-gray-700 font-semibold text-sm md:text-base">
                         નવો પાક :
                     </label>
                     <select
                         name="product[]"
-                        class="w-full px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]"
+                        class="select-option w-full px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]"
                     >
                         <option value="" disabled selected>--- પાક  પસંદ કરો ---</option>
                         <option value="product1">Product 1</option>
@@ -161,7 +162,7 @@
             selectContainer.style.display = 'none';
             
             const input = document.createElement('div');
-            input.className = 'flex-1';
+            input.className = 'flex-1 w-full';
             input.innerHTML = `
                 <label class="block text-gray-700 font-semibold text-sm md:text-base">
                     નવો પાક :
@@ -182,4 +183,4 @@
             }
         }
     </script>
-@endsection
+@endpush

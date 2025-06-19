@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="w-full lg:w-[calc(100%_-_230px)]">
-  <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">નવો સભ્ય ઉમેરો</h2>
+  <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">નવો સભ્ય ઉમેરો</h2>
   <div class="max-w-xl space-y-4">
     @if(session('status'))
       <div class="text-green-600">{{ session('status')}}</div>
@@ -15,7 +15,7 @@
       <div class="flex flex-col sm:flex-row gap-3">
         <input name="mobile" type="number" value="{{ old('mobile', session('mobile')) }}"
           placeholder="મોબાઈલ નંબર દાખલ કરો"
-          class="flex-1 px-5 py-3 border rounded-[12px] focus:ring-[#B3541E]" />
+          class="flex-1 px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none  focus:border-[#B3541E]" />
         <button class="bg-[#B3541E] text-white px-5 py-2 rounded-[12px]">Send OTP</button>
       </div>
       @error('mobile')<div class="text-red-500">{{ $message }}</div>@enderror
@@ -28,7 +28,7 @@
       <div class="flex flex-col sm:flex-row gap-3">
         <input name="mobile" type="hidden" value="{{ old('mobile', session('mobile')) }}" />
         <input name="otp" type="number" placeholder="OTP નંબર દાખલ કરો"
-          class="flex-1 px-5 py-3 border rounded-[12px] focus:ring-[#B3541E]" />
+          class="flex-1 px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none  focus:border-[#B3541E]" />
         <button class="bg-[#B3541E] text-white px-5 py-2 rounded-[12px]">Login</button>
       </div>
       @error('otp')<div class="text-red-500">{{ $message }}</div>@enderror

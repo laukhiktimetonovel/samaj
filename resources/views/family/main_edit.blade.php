@@ -2,7 +2,7 @@
 
 @section('content')
    <div class="w-full lg:w-[calc(100%_-_230px)]">
-        <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
             મુખ્ય સભ્ય ની માહિતી સુધારો
         </h2>
 
@@ -54,7 +54,7 @@
                 <div class="mb-5">
                     <label class="block text-[16px] font-medium text-[#B3541E] mb-1">ગામ નું નામ</label>
                     <select id="gam_select" name="gam_select"
-                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        class="select-option w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         @foreach ($gamOptions as $opt)
                             <option value="{{ $opt }}"
                                 {{ $opt == old('gam_select', $parent->village_name) ? 'selected' : '' }}>
@@ -109,7 +109,7 @@
                 {{-- Blood Group --}}
                 <div class="mb-5">
                     <label class="block text-[16px] font-medium text-[#B3541E] mb-1">બ્લડ ગ્રુપ:</label>
-                    <select name="blood_group" class="w-full border border-gray-300 rounded-md px-4 py-2">
+                    <select name="blood_group" class="select-option w-full border border-gray-300 rounded-md px-4 py-2">
                         @foreach (['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-', 'જાણ નથી'] as $bg)
                             <option value="{{ $bg }}"
                                 {{ old('blood_group', $parent->blood_group) == $bg ? 'selected' : '' }}>
@@ -137,7 +137,7 @@
                 {{-- Marital Status --}}
                 <div class="mb-5">
                     <label class="block text-[16px] font-medium text-[#B3541E] mb-1">વૈવાહિક દરજ્જો:</label>
-                    <select name="marital_status" class="w-full border border-gray-300 rounded-md px-4 py-2">
+                    <select name="marital_status" class="select-option w-full border border-gray-300 rounded-md px-4 py-2">
                         @foreach (['પરિણીત', 'અપરિણીત', 'ગંગા સ્વરૂપ', 'વિધુર', 'છૂટાછેડા', 'સગાઈ'] as $ms)
                             <option value="{{ $ms }}"
                                 {{ old('marital_status', $parent->marital_status) == $ms ? 'selected' : '' }}>

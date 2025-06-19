@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="w-full lg:w-[calc(100%_-_230px)]">
-    <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
+    <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
         વ્યવસાય શોધો 
     </h2>
     <div class="max-w-full space-y-4">
@@ -17,10 +17,10 @@
                     name="q"
                     value=""
                     placeholder="Enter name or mobile number"
-                    class="flex-1 px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]"
+                    class="flex-1 px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none  focus:border-[#B3541E]"
                 /> --}}
                 <div class="w-full">
-                    <select id="gam_select" name="gam_select" class="w-full flex-1 px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]">
+                    <select id="gam_select" name="gam_select" class="select-option w-full flex-1 px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none  focus:border-[#B3541E]">
                         <option value="">--- પસંદ કરો ---</option>
                         <option value="Test Village">Test Village</option>
                         <option value="other">Other</option>
@@ -34,8 +34,8 @@
             </div>
         </form>       
         <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-            <div class="bg-white shadow p-4 rounded-[12px]">
-                <ul class="mt-4 space-y-4 list-disc list-outside pl-6">
+            <div class="bg-white shadow p-6 md:p-8 rounded-[12px]">
+                <ul class="space-y-4 list-disc list-outside">
                     <li>
                         <p>
                             ગૌસ્વામી પ્રવિણગીરી 
@@ -45,9 +45,9 @@
                 </ul>
             </div>
 
-            <div class="bg-white shadow p-4 rounded-[12px]">
+            <div class="bg-white shadow p-6 md:p-8 rounded-[12px]">
                 
-                <ul class="mt-4 space-y-4 list-disc list-outside pl-6">
+                <ul class="space-y-4 list-disc list-outside">
                     <li>
                         <p>
                            ગૌસ્વામી પ્રવિણગીરી
@@ -57,9 +57,9 @@
                 </ul>
             </div>
 
-            <div class="bg-white shadow p-4 rounded-[12px]">
+            <div class="bg-white shadow p-6 md:p-8 rounded-[12px]">
                 
-                <ul class="mt-4 space-y-4 list-disc list-outside pl-6">
+                <ul class="space-y-4 list-disc list-outside">
                     <li>
                         <p>
                            ગૌસ્વામી પ્રવિણગીરી

@@ -15,7 +15,7 @@
     </style>
    <div class="w-full lg:w-[calc(100%_-_230px)]">
         <!-- Title -->
-        <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
             App માર્ગદર્શિકા
         </h2>
         <div class="mx-auto">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-full lg:w-[calc(100%_-_230px)]">
+    <div class="w-full lg:w-[calc(100%_-_230px)]">
     <!-- Profile Card -->
     <div class="bg-white p-4 md:p-6 shadow rounded-xl grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
         <!-- Image -->
@@ -30,10 +30,10 @@
 
                 <span class="font-semibold">જન્મ તારીખ :</span>
                 <span class="font-medium">
-                  {{ \Carbon\Carbon::parse($member->birth_date)->format('d-m-Y') }}
-                  @if($member->birth_date)
+                    {{ \Carbon\Carbon::parse($member->birth_date)->format('d-m-Y') }}
+                    @if($member->birth_date)
                     ({{ \Carbon\Carbon::parse($member->birth_date)->age }} વર્ષ)
-                  @endif
+                    @endif
                 </span>
 
                 <span class="font-semibold">બ્લડ ગ્રુપ :</span>
@@ -47,8 +47,8 @@
 
                 <span class="font-semibold">મોસાળ :</span>
                 <span class="font-medium">
-                  {{ $member->mosal_name ?? '—' }},
-                  {{ $member->mosal_village ?? '—' }}
+                    {{ $member->mosal_name ?? '—' }},
+                    {{ $member->mosal_village ?? '—' }}
                 </span>
 
                 <span class="font-semibold">હાલના રહેઠાણનું સરનામું :</span>
@@ -88,10 +88,10 @@
 
                             <span class="font-semibold">જન્મ તારીખ :</span>
                             <span class="font-medium">
-                              {{ $child->birth_date ? \Carbon\Carbon::parse($child->birth_date)->format('d-m-Y') : '—' }}
-                              @if($child->birth_date)
+                                {{ $child->birth_date ? \Carbon\Carbon::parse($child->birth_date)->format('d-m-Y') : '—' }}
+                                @if($child->birth_date)
                                 ({{ \Carbon\Carbon::parse($child->birth_date)->age }} વર્ષ)
-                              @endif
+                                @endif
                             </span>
 
                             <span class="font-semibold">બ્લડ ગ્રુપ :</span>
@@ -105,8 +105,8 @@
 
                             <span class="font-semibold">મોસાળ :</span>
                             <span class="font-medium">
-                              {{ $child->mosal_name ?? '—' }},
-                              {{ $child->mosal_village ?? '' }}
+                                {{ $child->mosal_name ?? '—' }},
+                                {{ $child->mosal_village ?? '' }}
                             </span>
 
                             <span class="font-semibold">વ્યવસાયનું નામ અથવા પ્રકાર :</span>
@@ -120,5 +120,5 @@
             </div>
         @endif
     </div>
-</div>
+    </div>
 @endsection

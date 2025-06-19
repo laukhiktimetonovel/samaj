@@ -8,7 +8,7 @@
     <title>તળપદા કોળી પટેલ સમાજ</title>
     <link rel="icon" href="{{ asset('images/logo.png') }}">
     
-    {{-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> --}}
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@100..800&display=swap" rel="stylesheet">
 
     @vite('resources/css/app.css')
@@ -16,7 +16,7 @@
 <body class="flex flex-col md:flex-row">
     @include('components.sidebar')
 
-    <div class="py-4 md:py-6 w-full px-4 md:min-h-screen md:max-h-screen md:overflow-y-auto">
+    <div class="py-4 md:py-6 w-full px-4 md:min-h-screen md:max-h-screen md:overflow-y-auto main-content">
       <div class="flex items-start flex-col lg:flex-row">
         @if(session('success'))
           <div class="bg-green-100 text-green-800 p-3 rounded mb-4">
@@ -25,10 +25,11 @@
         @endif
         
         @yield('content')
-        @include('components.advataizment')
         @include('components.mobileadvataizment')
+        @include('components.advataizment')
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{ asset('js/script.js') }}"></script>
 
     @stack('scripts')

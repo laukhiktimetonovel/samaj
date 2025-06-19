@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-full lg:w-[calc(100%_-_230px)]">
-        <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
             {{-- Map your pageName to a readable title --}}
             તળપદા કોળી પટેલ સમાજ ના હોદ્દેદારો
         </h2>

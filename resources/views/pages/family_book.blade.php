@@ -3,7 +3,7 @@
 @section('content')
    <div class="w-full lg:w-[calc(100%_-_230px)]">
         <!-- Title -->
-        <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
             {{ $gam }} પરિવાર
         </h2>
         <!-- Member list -->

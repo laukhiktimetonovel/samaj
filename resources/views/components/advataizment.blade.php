@@ -1,94 +1,41 @@
-<div id="" class="order-[-1] hidden md:block md:order-none w-full lg:w-[230px] pb-5 md:pb-0 lg:pl-4">
-   <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
-    <style>
-        .swiper-pagination-bullet {
-            width: 12px;
-            height: 3px;
-            background: #ffffff;
-            border-radius: 0;
-            opacity: 0.5;
-        }
-        .swiper-pagination-bullet-active {
-            background: #ffffff;
-            opacity: 1;
-        }
-        body .swiper-pagination {
-            position: absolute;
-            bottom: -3px    ;
-            left: 0;
-            right: 0;
-            text-align: center;
-            padding-top: 2px;
-        }
-        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-    bottom: -3px;
-    left: 0;
-    width: 100%;
-}
-    </style>
-  <!-- Full-Width Container -->
-    <div class="w-full max-w-full order-[-1]  pb-5 md:order-none ">
-        <!-- Ad Banner (Centered, 200px width) -->
-       <div class=" text-black text-center py-2">
-      <h3 class="text-sm font-bold">જાહેરાત *</h3>
-    </div>
-        <div class=" bg-white shadow-lg rounded-lg overflow-hidden">
-            
-            <!-- Ad Header -->
-            <!-- Slider -->
-            <div class="swiper-container relative">
-                <div class="swiper-wrapper">
-                    {{-- @php
-                        $advertisements = get_advertisements();
-                    @endphp
-                    @foreach($advertisements as $ad)
-                        <div class="swiper-slide">
-                            <a href="{{ $ad->url ?? 'javascipt:void(0);' }}">
-                                <img src="{{ asset($ad->image_path) }}" alt="{{ $ad->title ?? 'Advertisement' }}" class="w-full object-cover">
-                            </a>
-                        </div>
-                    @endforeach --}}
+<div class="order-[-1] hidden lg:block lg:order-none w-full lg:w-[230px] pb-5 md:pb-0 lg:pl-4 sticky top-0">
+    <h3 class="text-sm font-bold text-black text-center pb-2">જાહેરાત *</h3>
+    <div class=" bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="desktop-ads swiper-container relative">
+            <div class="swiper-wrapper">
+                {{-- @php
+                    $advertisements = get_advertisements();
+                @endphp
+                @foreach($advertisements as $ad)
                     <div class="swiper-slide">
-                        <a href="">
-                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
+                        <a href="{{ $ad->url ?? 'javascipt:void(0);' }}">
+                            <img src="{{ asset($ad->image_path) }}" alt="{{ $ad->title ?? 'Advertisement' }}" class="w-full object-cover">
                         </a>
                     </div>
-                    <div class="swiper-slide">
-                        <a href="">
+                @endforeach --}}
+                <div class="swiper-slide">
+                    <a href="https://einvite.in/" target="_blank">
                         <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="">
-                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="">
-                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
-                        </a>
-                    </div>
+                    </a>
                 </div>
-                <!-- Pagination (Dashes Above Slider) -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide">
+                    <a href="https://einvite.in/" target="_blank">
+                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://einvite.in/" target="_blank">
+                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://einvite.in/" target="_blank">
+                        <img src="{{ asset('images/160 × 600.png') }}" alt="Ad 1" class="w-full object-cover">
+                    </a>
+                </div>
             </div>
-           
-        </div>
+            <!-- Pagination (Dashes Above Slider) -->
+            <div class="swiper-pagination"></div>
+        </div> 
     </div>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                type: 'bullets',
-            },
-        });
-    </script>
-
 </div>

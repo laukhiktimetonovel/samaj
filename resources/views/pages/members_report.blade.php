@@ -2,7 +2,7 @@
 
 @section('content')
    <div class="w-full lg:w-[calc(100%_-_230px)]">
-        <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
             સભ્યોનો રિપોર્ટ
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 max-w-5xl">

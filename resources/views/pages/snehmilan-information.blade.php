@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="w-full lg:w-[calc(100%_-_230px)]">
-        <h2 class="font-semibold text-2xl mb-4 text-center md:text-left">
+    <div class="w-full lg:w-[calc(100%_-_230px)]">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
             સ્નેહમિલન સમારંભ ના દાતાશ્રીઓ
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
