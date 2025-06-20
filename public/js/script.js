@@ -79,8 +79,11 @@ window.addEventListener('load', () => {
   }
 });
 
-// Swiper config generator
-const initSwiper = selector => {
+// Initialize Swiper on a given selector
+const initializeSwiper = (selector) => {
+  const element = document.querySelector(selector);
+  if (!element) return;
+
   new Swiper(selector, {
     autoplay: {
       delay: 3000,
@@ -88,12 +91,13 @@ const initSwiper = selector => {
     },
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: `${selector} .swiper-pagination`,
       clickable: true,
       type: 'bullets',
     },
   });
 };
 
-// Initialize swipers
-['.mobile-ads', '.desktop-ads'].forEach(initSwiper);
+// Initialize Swipers for all defined selectors
+['.mobile-ads', '.desktop-ads'].forEach(initializeSwiper);
+

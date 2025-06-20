@@ -6,7 +6,7 @@
             ઘરના સભ્ય ઉમેરો
         </h2>
 
-        <div class="bg-white shadow p-6 md:p-8 rounded-[12px] mt-6 p-8">
+        <div class="bg-white shadow p-6 md:p-8 rounded-[12px] mt-6">
             <form action="{{ route('family.child.store') }}" method="POST">
                 @csrf
 
