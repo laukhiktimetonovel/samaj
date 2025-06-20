@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="flex items-center justify-between mb-6">
-    <h2 class="font-semibold text-2xl text-[#B3541E]">All Members</h2>
+    <h2 class="font-semibold text-xl md:text-2xl text-[#575228]">All Members</h2>
     <a href="{{ route('members.create') }}"
        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
       Add New Member

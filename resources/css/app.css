@@ -12,21 +12,21 @@
 
 body {
     font-family: "Anek Gujarati", sans-serif;
-    background: linear-gradient(180deg, rgba(255, 247, 237, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(180deg, rgb(247 201 17 / 9%) 0%, rgba(255, 255, 255, 1) 100%);
 }
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-   background: linear-gradient(180deg, rgba(255, 247, 237, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    -webkit-border-radius: 7px;
-    border-radius: 7px;
+   background: linear-gradient(180deg, rgb(247 201 17 / 9%) 0%, rgba(255, 255, 255, 1) 100%);
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 7px;
-    border-radius: 7px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
     background: #575228; 
 }
 .page-active {
@@ -37,10 +37,10 @@ body {
     opacity: 0.3;
 }
 input[type="radio"]:checked {
-    accent-color: #b3541e;
+    accent-color: #575228;
 }
 input[type="radio"]:checked + span {
-    color: #b3541e;
+    color: #575228;
     font-weight: 600;
 }
 .select-option{

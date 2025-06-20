@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="w-full lg:w-[calc(100%_-_230px)]">
-    <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
+    <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left text-[#575228]">
         લગ્ન વિષયક
     </h2>
     <div class="max-w-full space-y-4">
@@ -15,7 +15,7 @@
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
                         Age (From)
                     </label>
-                    <select name="age_from" class="select-option w-full px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]">
+                    <select name="age_from" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
                         <option value="">-- Select Age --</option>
                         @for ($i = 18; $i <= 60; $i++)
                             <option value="{{ $i }}" {{ request('age_from') == $i ? 'selected' : '' }}>{{ $i }}</option>
@@ -28,7 +28,7 @@
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
                         Age (To)
                     </label>
-                    <select name="age_to" class="select-option w-full px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]">
+                    <select name="age_to" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
                         <option value="">-- Select Age --</option>
                         @for ($i = 18; $i <= 60; $i++)
                             <option value="{{ $i }}" {{ request('age_to') == $i ? 'selected' : '' }}>{{ $i }}</option>
@@ -41,7 +41,7 @@
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
                         Select Gender
                     </label>
-                    <select name="gender" class="select-option w-full px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none focus:ring-1 focus:ring-[#B3541E]">
+                    <select name="gender" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
                         <option value="">-- Select Gender --</option>
                         <option value="પુરુષ" {{ request('gender') == 'પુરુષ' ? 'selected' : '' }}>પુરુષ</option>
                         <option value="સ્ત્રી" {{ request('gender') == 'સ્ત્રી' ? 'selected' : '' }}> મહિલા</option>
@@ -50,7 +50,7 @@
 
                 <!-- Submit Button -->
                 <div>
-                    <button type="submit" class="bg-[#B3541E] h-[55px] text-white px-6 py-3 rounded-[12px] transition hover:bg-[#944015]">
+                    <button type="submit" class="bg-[#575228] text-white px-6 py-3 rounded-[12px] transition">
                         Search
                     </button>
                 </div>

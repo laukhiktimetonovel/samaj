@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="{{ asset('manifest.json') }}">
-    <meta name="theme-color" content="#B3541E" />
+    <meta name="theme-color" content="#575228" />
     <title>તળપદા કોળી પટેલ સમાજ</title>
     <link rel="icon" href="{{ asset('images/logo.png') }}">
     

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-full lg:w-[calc(100%_-_230px)]">
-        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left text-[#575228]">
             સભ્ય શોધો
         </h2>
         <div class="max-w-xl space-y-4">
@@ -17,11 +17,11 @@
                         name="q"
                         value="{{ old('q', $q) }}"
                         placeholder="Enter name or mobile number"
-                        class="flex-1 px-5 py-3 border border-gray-300 rounded-[12px] focus:outline-none  focus:border-[#B3541E]"
+                        class="flex-1 px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]"
                     />
                     <button
                         type="submit"
-                        class="bg-[#B3541E] text-white px-5 py-2 rounded-[12px] transition cursor-pointer"
+                        class="bg-[#575228] text-white px-5 py-2 rounded-[12px] transition cursor-pointer"
                     >
                         Search
                     </button>

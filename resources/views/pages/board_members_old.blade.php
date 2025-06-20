@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-full lg:w-[calc(100%_-_230px)]">
-        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left text-[#575228]">
             {{-- Map your pageName to a readable title --}}
             તળપદા કોળી પટેલ સમાજ ના હોદ્દેદારો
         </h2>
@@ -21,7 +21,7 @@
                     </div>
                     <div class="flex-col gap-1 flex flex-1">
                         <h2 class="font-semibold md:font-bold sm:text-lg flex-1">{{ $member->name }}</h2>
-                        <p class="text-[#B3541E] text-sm">{{ $member->role }}</p>
+                        <p class="text-[#575228] text-sm">{{ $member->role }}</p>
                         <p>Mo: {{ $member->phone }}</p>
                     </div>
                 </div>

@@ -2,13 +2,13 @@
 
 @section('content')
    <div class="w-full lg:w-[calc(100%_-_230px)]">
-        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left">
+        <h2 class="font-semibold text-xl md:text-2xl mb-4 text-center md:text-left text-[#575228]">
             સભ્યોનો રિપોર્ટ
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 max-w-5xl">
             <div class="bg-white rounded-[12px] shadow p-4 text-center">
                 <p class="text-xl font-semibold">સદસ્ય :</p>
-                <p class="text-2xl font-semibold pt-2 text-[#B3541E]">{{ $grandTotalSadasy }}</p>
+                <p class="text-2xl font-semibold pt-2 text-[#575228]">{{ $grandTotalSadasy }}</p>
             </div>
         </div>
         <div class="flex flex-wrap -m-2">
@@ -16,7 +16,7 @@
                 <div class="bg-white shadow rounded-xl p-4">
                     <h2 class="text-[#575228] text-xl font-bold mb-4 mt-2">સભ્ય સંખ્યા</h2>
                     <div class="overflow-x-auto bg-white">
-                        <table class="text-center min-w-full divide-y divide-gray-200">
+                        <table class="text-center min-w-full divide-y divide-gray-400">
                             <thead>
                                 <tr>
                                     <th class="bg-[#bec33370] py-2 px-4 border border-gray-400" rowspan="2">પરિવાર</th>
@@ -31,23 +31,23 @@
                             <tbody class="divide-y divide-gray-100 text-sm">
                                 @foreach($reportData as $village => $data)
                                     <tr>
-                                        <td class="font-bold bg-[#f9d34436] py-2 px-4 border-gray-300 border">{{ $village }}</td>
-                                        <td class="py-2 px-4 border-gray-300 border">{{ $data['male'] }}</td>
-                                        <td class="py-2 px-4 border-gray-300 border">{{ $data['female'] }}</td>
-                                        <td class="font-bold bg-[#f9d34436] py-2 px-4 border-gray-300 border">{{ $data['total'] }}</td>
+                                        <td class="font-bold bg-[#f9d34436] py-2 px-4 border-gray-400 border">{{ $village }}</td>
+                                        <td class="py-2 px-4 border-gray-400 border">{{ $data['male'] }}</td>
+                                        <td class="py-2 px-4 border-gray-400 border">{{ $data['female'] }}</td>
+                                        <td class="font-bold bg-[#f9d34436] py-2 px-4 border-gray-400 border">{{ $data['total'] }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td class="py-2 px-4 border border-gray-300 bg-[#bec33370s] font-bold">કુલ</td>
-                                    <td class="py-2 px-4 border border-gray-300 bg-[#bec33370s] font-bold">
+                                    <td class="py-2 px-4 border border-gray-400 bg-[#bec33370s] font-bold">કુલ</td>
+                                    <td class="py-2 px-4 border border-gray-400 bg-[#bec33370s] font-bold">
                                         {{ array_sum(array_column($reportData, 'male')) }}
                                     </td>
-                                    <td class="py-2 px-4 border border-gray-300 bg-[#bec33370s] font-bold">
+                                    <td class="py-2 px-4 border border-gray-400 bg-[#bec33370s] font-bold">
                                         {{ array_sum(array_column($reportData, 'female')) }}
                                     </td>
-                                    <td class="py-2 px-4 border border-gray-300 bg-[#bec33370s] font-bold">{{ $grandTotalSadasy }}</td>
+                                    <td class="py-2 px-4 border border-gray-400 bg-[#bec33370s] font-bold">{{ $grandTotalSadasy }}</td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -60,7 +60,7 @@
                 <!-- Blood Group Chart -->
                 <div class="bg-white shadow rounded-xl p-4 mb-4">
                     <h2 class="text-[#575228] text-xl font-bold mb-4 mt-2">બ્લડગ્રુપ ચાર્ટ</h2>
-                    <table class="text-center min-w-full divide-y divide-gray-200">
+                    <table class="text-center min-w-full divide-y divide-gray-400">
                         <thead>
                             <tr>
                                 <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">બ્લડગ્રુપ</th>
@@ -68,12 +68,12 @@
                                 <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">ટકાવારી</th>
                             </tr>
                         </thead>
-                        <tbody class="text-sm divide-y divide-gray-200">
+                        <tbody class="text-sm divide-y divide-gray-400">
                             @foreach($bloodGroupData as $group => $data)
                                 <tr>
-                                    <td class="py-2 px-4 border-gray-300 border">{{ $group }}</td>
-                                    <td class="py-2 px-4 border-gray-300 border">{{ $data['count'] }}</td>
-                                    <td class="py-2 px-4 border-gray-300 border">{{ $data['percentage'] }}%</td>
+                                    <td class="py-2 px-4 border-gray-400 border">{{ $group }}</td>
+                                    <td class="py-2 px-4 border-gray-400 border">{{ $data['count'] }}</td>
+                                    <td class="py-2 px-4 border-gray-400 border">{{ $data['percentage'] }}%</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -83,7 +83,7 @@
                 <!-- Gender Ratio Chart -->
                 <div class="bg-white shadow rounded-xl p-4">
                     <h2 class="text-[#575228] text-xl font-bold mb-4 mt-2">સ્ત્રી - પુરુષ રેશિયો</h2>
-                    <table class="w-full text-left border-t border-gray-200 mb-4">
+                    <table class="w-full text-left border-t border-gray-400 mb-4">
                         <thead>
                             <tr>
                                 <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">જાતિ</th>
@@ -91,26 +91,26 @@
                                 <th class="bg-[#bec33370] py-2 px-4 border border-gray-400">ટકાવારી</th>
                             </tr>
                         </thead>
-                        <tbody class="text-sm divide-y divide-gray-200">
+                        <tbody class="text-sm divide-y divide-gray-400">
                             <tr>
-                                <td class="py-2 px-4 border-gray-300 border">
+                                <td class="py-2 px-4 border-gray-400 border">
                                     <div class="flex items-center gap-2"><span class="size-4 rounded bg-[#f472b6] block"></span> સ્ત્રીઓ</div>
                                 </td>
-                                <td class="py-2 px-4 border-gray-300 border">{{ $genderRatio['female']['count'] }}</td>
-                                <td class="py-2 px-4 border-gray-300 border">{{ $genderRatio['female']['percentage'] }}%</td>
+                                <td class="py-2 px-4 border-gray-400 border">{{ $genderRatio['female']['count'] }}</td>
+                                <td class="py-2 px-4 border-gray-400 border">{{ $genderRatio['female']['percentage'] }}%</td>
                             </tr>
                             <tr>
-                                <td class="py-2 px-4 border-gray-300 border">
+                                <td class="py-2 px-4 border-gray-400 border">
                                     <div class="flex items-center gap-2"><span class="size-4 rounded bg-[#3b82f6] block"></span> પુરુષો</div>
                                 </td>
-                                <td class="py-2 px-4 border-gray-300 border">{{ $genderRatio['male']['count'] }}</td>
-                                <td class="py-2 px-4 border-gray-300 border">{{ $genderRatio['male']['percentage'] }}%</td>
+                                <td class="py-2 px-4 border-gray-400 border">{{ $genderRatio['male']['count'] }}</td>
+                                <td class="py-2 px-4 border-gray-400 border">{{ $genderRatio['male']['percentage'] }}%</td>
                             </tr>
                         </tbody>
                     </table>
                     <p class="text-sm mb-2">→ ગામ માં દર 100 પુરુષો સામે {{ $genderRatio['ratio'] }} સ્ત્રીઓ છે.</p>
                     <span>(App માં હાજર માહિતી પરથી*)</span>
-                    <canvas id="genderPieChart" class="mx-auto" width="200" height="200"></canvas>
+                    <canvas id="genderPieChart" class="mx-auto" width="400" height="400"></canvas>
                 </div>
             </div>
         </div>
