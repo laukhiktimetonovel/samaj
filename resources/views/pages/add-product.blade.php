@@ -62,7 +62,7 @@
                 <!-- Submit Button -->
                 <div class="flex">
                     <button type="submit" class="bg-[#575228] text-white px-5 py-2 rounded-[12px] transition cursor-pointer" >
-                        Save
+                        સેવ કરો
                     </button>
                 </div>
             </form>

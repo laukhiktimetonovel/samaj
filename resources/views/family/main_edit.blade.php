@@ -170,7 +170,7 @@
 
                 <div class="mt-6">
                     <button type="submit" class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600">
-                        Save
+                        સેવ કરો
                     </button>
                 </div>
             </form>

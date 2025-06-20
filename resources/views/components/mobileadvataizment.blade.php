@@ -2,7 +2,7 @@
 <div class="w-full max-w-full order-[-1] block lg:hidden pb-5 lg:order-none">
     <h3 class="text-sm font-bold text-black text-center pb-2 md:mt-[-10px]">જાહેરાત  *</h3>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <div class="mobile-ads swiper-container relative">
+        <div class="mobile-ads  relative">
             <div class="swiper-wrapper">
                 {{-- @php
                     $advertisements = get_advertisements();
