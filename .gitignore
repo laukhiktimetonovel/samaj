@@ -20,3 +20,5 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+postcss1.config.cjs
+postcss.config.cjs

@@ -7,45 +7,48 @@
     </h2>
     <div class="max-w-full space-y-4">
         <!-- Search Form -->
-        <form action="{{ route('pages.matrimony') }}" method="GET" class="space-y-2 max-w-[60%]">
+        <form action="{{ route('pages.matrimony') }}" method="GET" class="space-y-2 max-w-[60%]" id="matrimony-form">
             <input type="hidden" name="search" value="1">
             <div class="flex flex-col sm:flex-row gap-3 items-end">
                 <!-- Age From -->
                 <div class="w-full">
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
-                        Age (From)
+                        ઉંમર (થી)
                     </label>
-                    <select name="age_from" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
+                    <select name="age_from" id="age_from" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
                         <option value="">-- Select Age --</option>
                         @for ($i = 18; $i <= 60; $i++)
                             <option value="{{ $i }}" {{ request('age_from') == $i ? 'selected' : '' }}>{{ $i }}</option>
                         @endfor
                     </select>
+                    <p class="error text-red-500 text-sm mt-1 hidden" id="age_from_error"></p>
                 </div>
 
                 <!-- Age To -->
                 <div class="w-full">
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
-                        Age (To)
+                        ઉંમર (સુધી)
                     </label>
-                    <select name="age_to" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
+                    <select name="age_to" id="age_to" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
                         <option value="">-- Select Age --</option>
                         @for ($i = 18; $i <= 60; $i++)
                             <option value="{{ $i }}" {{ request('age_to') == $i ? 'selected' : '' }}>{{ $i }}</option>
                         @endfor
                     </select>
+                    <p class="error text-red-500 text-sm mt-1 hidden" id="age_to_error"></p>
                 </div>
 
                 <!-- Gender -->
                 <div class="w-full">
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
-                        Select Gender
+                        જાતિ
                     </label>
-                    <select name="gender" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
+                    <select id="gender" name="gender" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
                         <option value="">-- Select Gender --</option>
                         <option value="પુરુષ" {{ request('gender') == 'પુરુષ' ? 'selected' : '' }}>પુરુષ</option>
                         <option value="સ્ત્રી" {{ request('gender') == 'સ્ત્રી' ? 'selected' : '' }}> મહિલા</option>
                     </select>
+                    <p class="error text-red-500 text-sm mt-1 hidden" id="gender_error"></p>
                 </div>
 
                 <!-- Submit Button -->
@@ -103,3 +106,74 @@
     </div>
 </div>
 @endsection
+
+
+@push('scripts')
+<script>
+        console.log("called");
+    document.getElementById('matrimony-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        console.log("called");
+        
+        // Reset error messages and styles
+        const fields = ['age_from', 'age_to', 'gender'];
+        fields.forEach(field => {
+            const input = document.getElementById(field);
+            const error = document.getElementById(field + '_error');
+            input.classList.remove('border-red-500');
+            error.classList.add('hidden');
+            error.textContent = '';
+        });
+
+        // Get field values
+        const ageFrom = document.getElementById('age_from').value;
+        const ageTo = document.getElementById('age_to').value;
+        const gender = document.getElementById('gender').value;
+
+        let hasError = false;
+
+        // Validate age_from
+        if (!ageFrom) {
+            showError('age_from', 'ઉંમર (થી) ફરજિયાત છે.');
+            hasError = true;
+        } else if (isNaN(ageFrom) || ageFrom < 18 || ageFrom > 60) {
+            showError('age_from', 'ઉંમર (થી) 18 થી 60 ની વચ્ચે હોવી જોઈએ.');
+            hasError = true;
+        }
+
+        // Validate age_to
+        if (!ageTo) {
+            showError('age_to', 'ઉંમર (સુધી) ફરજિયાત છે.');
+            hasError = true;
+        } else if (isNaN(ageTo) || ageTo < 18 || ageTo > 60) {
+            showError('age_to', 'ઉંમર (સુધી) 18 થી 60 ની વચ્ચે હોવી જોઈએ.');
+            hasError = true;
+        } else if (ageFrom && ageTo && parseInt(ageTo) < parseInt(ageFrom)) {
+            showError('age_to', 'ઉંમર (સુધી) ઉંમર (થી) કરતાં મોટી કે બરાબર હોવી જોઈએ.');
+            hasError = true;
+        }
+
+        // Validate gender
+        if (!gender) {
+            showError('gender', 'જાતિ ફરજિયાત છે.');
+            hasError = true;
+        } else if (gender !== 'પુરુષ' && gender !== 'સ્ત્રી') {
+            showError('gender', 'જાતિ ફક્ત પુરુષ કે સ્ત્રી હોવી જોઈએ.');
+            hasError = true;
+        }
+
+        // Submit form if no errors
+        if (!hasError) {
+            this.submit();
+        }
+    });
+
+    function showError(field, message) {
+        const input = document.getElementById(field);
+        const error = document.getElementById(field + '_error');
+        input.classList.add('border-red-500');
+        error.textContent = message;
+        error.classList.remove('hidden');
+    }
+</script>
+@endpush

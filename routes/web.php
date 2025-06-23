@@ -39,7 +39,6 @@ Route::get('/help', [PageController::class, 'help'])->name('pages.help');
 Route::get('/village-history', [PageController::class, 'villageHistory'])->name('village-history');
 Route::get('/mass-marriage-Information', [PageController::class, 'massMarriageInformation'])->name('mass-marriage-Information');
 Route::get('/find-business', [PageController::class, 'findBusiness'])->name('pages.find-business');
-Route::get('/add-product', [PageController::class, 'addProduct'])->name('pages.add-product');
 Route::get('/product-report', [PageController::class, 'productReport'])->name('pages.product-report');
 Route::get('/matrimony', [PageController::class, 'matrimonyReport'])->name('pages.matrimony');
      
@@ -61,4 +60,8 @@ Route::middleware('auth:family')->group(function(){
      Route::get('family/child/{child}/edit',    [FamilyController::class,'editChild'])->name('family.child.edit');
      Route::put('family/child/{child}',         [FamilyController::class,'updateChild'])->name('family.child.update');
      Route::delete('family/child/{child}', [FamilyController::class, 'destroyChild'])->name('family.child.destroy');
+
+     
+     Route::get('/add-product', [PageController::class, 'addProduct'])->name('pages.farmer');
+     Route::post('/add-product-store', [PageController::class, 'addProduct'])->name('pages.farmer.store');
 });

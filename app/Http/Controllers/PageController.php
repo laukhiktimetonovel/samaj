@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Farmer;
 use App\Models\Member;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -31,17 +33,80 @@ class PageController extends Controller
     {
         return view('pages.snehmilan-information');
     }
-    public function findBusiness()
+    public function findBusiness(Request $request)
     {
-        return view('pages.find-business');
+        $uniqueBusinesses = Member::select('business_name')
+            ->whereNotNull('business_name')
+            ->distinct()
+            ->pluck('business_name')
+            ->filter()
+            ->values();
+
+        $members = null;
+
+        if ($request->filled('business_select')) {
+            $business = $request->input('business_select');
+            $members = Member::where('business_name', $business)->get();
+        }
+        return view('pages.find-business', compact('members', 'uniqueBusinesses'));
     }
-     public function addProduct()
+    public function addProduct(Request $request)
     {
-        return view('pages.add-product');
+        $farmer = Auth::check() ? Auth::user()->farmer : null;
+        $uniqueProducts = Farmer::select('products')
+            ->get()
+            ->pluck('products')
+            ->flatten()
+            ->unique()
+            ->filter()
+            ->values();
+
+        if ($request->isMethod('post')) {
+            $products = array_filter(
+                array_map('trim', $request->input('product', [])),
+                fn($p) => !empty($p)
+            );
+            $data = [
+                'name' => $request->input('name'),
+                'mobile' => $request->input('number'),
+                'address' => $request->input('address'),
+                'products' => array_unique($products), // Ensure unique products
+            ];
+            if (!Auth::check()) {
+                return redirect()->route('login')->with('error_in', 'કૃપા કરીને લૉગિન કરો.');
+            }
+
+            if ($farmer) {
+                // Update existing farmer
+                $farmer->update($data);
+                return redirect()->route('pages.farmer')->with('success_in', 'ખેડૂતની માહિતી અપડેટ થઈ.');
+            } else {
+                // Create new farmer
+                $data['member_id'] = Auth::id();
+                Farmer::create($data);
+                return redirect()->route('pages.farmer')->with('success_in', 'ખેડૂતની માહિતી સેવ થઈ.');
+            }
+        }
+        return view('pages.farmer', compact('farmer', 'uniqueProducts'));
     }
-    public function productReport()
+    public function productReport(Request $request)
     {
-        return view('pages.product-report');
+        $uniqueProducts = Farmer::select('products')
+            ->get()
+            ->pluck('products')
+            ->flatten()
+            ->unique()
+            ->filter()
+            ->values();
+
+        $farmers = null;
+
+        if ($request->filled('product_select')) {
+            $product = $request->input('product_select');
+            $farmers = Farmer::whereJsonContains('products', $product)->get();
+            // $farmers = Farmer::whereRaw("JSON_CONTAINS(products, '\"$product\"')")->get();
+        }
+        return view('pages.product-report', compact('farmers', 'uniqueProducts'));
     }
     public function matrimonyReport(Request $request)
     {

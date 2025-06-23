@@ -62,4 +62,9 @@ class Member extends Authenticatable
     {
         return $query->whereIn('marital_status', ['અપરિણીત', 'છૂટાછેડા']);
     }
+    
+    public function farmer()
+    {
+        return $this->hasOne(Farmer::class);
+    }
 }
