@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Member;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class MemberController extends Controller
 {
@@ -44,6 +45,7 @@ class MemberController extends Controller
             'gam_other'           => 'nullable|string',
             'village_address'     => 'nullable|string',
             'current_address'     => 'nullable|string',
+            'password' => 'required|string|min:6',
         ]);
 
         // choose village_name from dropdown or custom
@@ -52,6 +54,7 @@ class MemberController extends Controller
             : $data['gam_select'];
 
         // $data['village_name'] = "કિયાદરા";
+        $data['password'] = Hash::make($data['password']);
 
         unset($data['gam_select'], $data['gam_other']);
         // handle photo upload

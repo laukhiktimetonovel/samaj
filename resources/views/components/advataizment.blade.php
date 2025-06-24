@@ -4,7 +4,7 @@
         <div class="desktop-ads relative">
             <div class="swiper-wrapper">
                 @php
-                    $advertisements = get_advertisements();
+                    $advertisements = get_advertisements('screen');
                 @endphp
                 @foreach($advertisements as $ad)
                     <div class="swiper-slide">

@@ -13,7 +13,7 @@ class Member extends Authenticatable
         'relation',
         'full_name',
         'mobile',
-        'otp_code',
+        'password',
         'otp_sent_at',
         'birth_date',
         'current_address',
@@ -29,6 +29,10 @@ class Member extends Authenticatable
         'mosal_village',
         'village_name',
         'photo_url'
+    ];
+
+    protected $hidden = [
+        'password'
     ];
 
     protected $casts = [

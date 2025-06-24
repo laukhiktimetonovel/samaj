@@ -9,6 +9,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -108,6 +109,25 @@ class FamilyController extends Controller
         Session::flash('mobile', $req->mobile);
         return redirect()->route('login')
                          ->with('status','કૃપા કરીને '.$req->mobile . ' માં ઓટીપી તપાસો.');
+    }
+
+    
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'mobile' => 'required|digits:10',
+            'password' => 'required|string',
+        ]);
+
+        $member = Member::where('mobile', $credentials['mobile'])->first();
+
+        if ($member && Hash::check($credentials['password'], $member->password)) {
+            // Custom authentication logic (since Laravel's Auth might not use mobile)
+            Auth::guard('family')->login($member);
+            return redirect()->route('family.profile');
+        }
+
+        return back()->withErrors(['password' => 'મોબાઇલ અને પાસવર્ડ ખોટા છે.'])->withInput();
     }
 
     // Verify OTP

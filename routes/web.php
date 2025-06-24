@@ -43,6 +43,7 @@ Route::get('/product-report', [PageController::class, 'productReport'])->name('p
 Route::get('/matrimony', [PageController::class, 'matrimonyReport'])->name('pages.matrimony');
      
 Route::get('/family/login', [FamilyController::class, 'showLoginForm'])->name('login');
+Route::post('/family/login', [FamilyController::class, 'login'])->name('family.login');
 Route::post('/family/login/otp', [FamilyController::class, 'sendOtp'])->name('family.login.sendOtp');
 Route::post('/family/login/verify', [FamilyController::class, 'verifyOtp'])->name('family.login.verify');
 

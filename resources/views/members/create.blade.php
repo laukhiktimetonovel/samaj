@@ -62,6 +62,16 @@
                         <div class="text-red-500 mt-1">{{ $message }}</div>
                     @enderror
                 </div>
+                
+                <!-- પાસવર્ડ -->
+                <div class="mb-5">
+                    <label class="block text-[16px] font-medium text-[#575228] mb-1">પાસવર્ડ:</label>
+                    <input type="password" name="password" value="{{ old('password') }}"
+                        class="w-full border border-gray-400 rounded-md px-4 py-2">
+                    @error('password')
+                        <div class="text-red-500 mt-1">{{ $message }}</div>
+                    @enderror
+                </div>
 
                 <!-- જન્મ તારીખ -->
                 <div class="mb-5">

@@ -5,7 +5,7 @@
         <div class="mobile-ads relative">
             <div class="swiper-wrapper">
                 @php
-                    $advertisements = get_advertisements();
+                    $advertisements = get_advertisements('mobile');
                 @endphp
                 @foreach($advertisements as $ad)
                     <div class="swiper-slide">
