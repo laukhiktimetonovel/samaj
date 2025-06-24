@@ -13,7 +13,7 @@ class AdvertisementSeeder extends Seeder
      */
     public function run(): void
     {
-        Advertisement::create([
+        // Advertisement::create([
         //     'title' => 'Ad 1',
         //     'image_path' => 'images/160 × 600.png',
         //     'url' => '#',
