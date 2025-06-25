@@ -1,15 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="flex items-center justify-between mb-6">
+  <div class="w-full lg:w-[calc(100%_-_230px)]">
+    <div class="flex justify-between items-center">
     <h2 class="font-semibold text-xl md:text-2xl text-[#575228]">All Members</h2>
     <a href="{{ route('members.create') }}"
        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
       Add New Member
     </a>
-  </div>
+    </div>
 
-  <div class="overflow-x-auto bg-white shadow rounded-lg">
+      <div class="overflow-x-auto mt-5 bg-white shadow rounded-lg">
     <table class="min-w-full divide-y divide-gray-200">
       <thead class="bg-gray-50">
         <tr>
@@ -39,4 +40,7 @@
       </tbody>
     </table>
   </div>
+  </div>
+
+
 @endsection
