@@ -31,7 +31,7 @@ use Intervention\Image\Drivers\Gd\Driver;
         $manager = ImageManager::gd();
 
         $fontPath = public_path('fonts/Bronto-RegularItalic.ttf');
-        $imagePath = public_path('storage/mobile-number-bg-new.png');
+        $imagePath = public_path('images/mobile-number-bg.png');
         $image = $manager->read($imagePath);
         $width = $image->width();
         $image->text($displayNumber, $width / 2 , 40, function ($font) use ($fontPath) {
