@@ -86,13 +86,13 @@
                             <!-- Mobile Number -->
                             <div class="flex items-center space-x-2">
                                 <span class="text-pink-600 text-lg">📞</span>
-                                <span class="font-medium text-[16px]">{{ $parent->mobile ?? 'N/A' }}</span>
+                                <span class="font-medium text-[16px]">{{ $parent->mobile ?? '—' }}</span>
                             </div>
 
                             <!-- Address -->
                             <div class="flex items-start space-x-2">
                                 <span class="text-yellow-600 text-lg">📍</span>
-                                <span class="mt-1 text-[16px]">{{ $parent->current_address ?? 'N/A' }}</span>
+                                <span class="mt-1 text-[16px]">{{ $parent->current_address ?? '-' }}</span>
                             </div>
                         </div>
                     </div>

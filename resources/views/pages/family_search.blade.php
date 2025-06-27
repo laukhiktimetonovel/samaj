@@ -39,7 +39,7 @@
                                 {{ $member->full_name }} ({{ $member->village_name }})
                             </p>
                             <p class="text-gray-700 font-medium mt-1">
-                                મોબાઈલ નંબર: {{ $member->mobile ?? '—' }}
+                                મોબાઈલ નંબર: {!! $member->mobile ? '<img src="' . number_to_image($member->mobile) . '">' : '—' !!}
                             </p>
                         </a>
                     @endforeach

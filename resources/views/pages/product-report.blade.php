@@ -38,7 +38,7 @@
                             </div>
                             <div class="flex">
                                 <span class="w-[100px] text-[#575228] font-semibold">મો. નંબર :-</span>
-                                <p>{{ $farmer->mobile }}</p>
+                                <p><img src="{{ number_to_image($farmer->mobile) ?? '—' }}" /></p>
                             </div>
                             <div class="flex">
                                 <span class="w-[100px] text-[#575228] font-semibold">સરનામું :-</span>

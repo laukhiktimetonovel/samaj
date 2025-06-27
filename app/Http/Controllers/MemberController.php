@@ -63,7 +63,8 @@ class MemberController extends Controller
             $path = $request->file('photo')->store('photos','public');
             $data['photo_url'] = $path;
         }
-
+        
+        number_to_image($data['mobile']);
         Member::create($data);
 
         return redirect()->route('members.index')

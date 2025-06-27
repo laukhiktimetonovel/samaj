@@ -31,12 +31,20 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
                 @forelse ($members as $member)
                     <div class="bg-white shadow p-6 md:p-8 rounded-[12px]">
-                        <ul class="space-y-4 list-disc list-outside">
-                            <li>
+                        <div class="space-y-4 list-disc list-outside">
+                            <div class="flex">
+                                <span class="w-[100px] text-[#575228] font-semibold">નામ :-</span>
                                 <p>{{ $member->full_name }}</p>
-                                <p class="text-[#575228] font-semibold">મો:- {{ $member->mobile }}</p>
-                            </li>
-                        </ul>
+                            </div>
+                            <div class="flex">
+                                <span class="w-[100px] text-[#575228] font-semibold">મો. નંબર :-</span>
+                                <p><img src="{{ number_to_image($member->mobile) ?? '—' }}" /></p>
+                            </div>
+                            <div class="flex">
+                                <span class="w-[100px] text-[#575228] font-semibold">સરનામું :-</span>
+                                <p>{{ $member->current_address }}</p>
+                            </div>
+                        </div>
                     </div>
                 @empty
                     <div class="col-span-full text-left text-gray-600">

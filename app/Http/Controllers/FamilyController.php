@@ -277,7 +277,9 @@ class FamilyController extends Controller
         $data['sequence'] = $maxSequnce !== null ? $maxSequnce + 1 : 0;
         // set parent_id
         $data['parent_id'] = $parent->id;
-
+        if($data['mobile']) {
+            number_to_image($data['mobile']);
+        }
         \App\Models\Member::create($data);
 
         return redirect()->route('family.profile')
@@ -318,6 +320,9 @@ class FamilyController extends Controller
         ]);
 
         $child->update($data);
+        if($data['mobile']) {
+            number_to_image($data['mobile']);
+        }
 
         return redirect()->route('family.profile')
                          ->with('status', 'માન્ય સભ્યની માહિતી સફળતાપૂર્વક સુધારાઈ.');

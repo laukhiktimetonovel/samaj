@@ -26,7 +26,7 @@
                 <span class="font-bold">{{ $member->full_name }} ({{ $member->village_name }})</span>
 
                 <span class="font-semibold">મોબાઈલ નંબર :</span>
-                <span class="font-medium">{{ $member->mobile ?? '—' }}</span>
+                <span class="font-medium"><img src="{{ number_to_image($member->mobile) ?? '—' }}" /></span>
 
                 <span class="font-semibold">જન્મ તારીખ :</span>
                 <span class="font-medium">
@@ -84,7 +84,7 @@
                             <span class="font-medium">{{ $child->relation }}</span>
 
                             <span class="font-semibold">મોબાઈલ નંબર :</span>
-                            <span class="font-medium">{{ $child->mobile ?? '—' }}</span>
+                            <span class="font-medium">{!! $child->mobile ? '<img src="' . number_to_image($child->mobile) . '">' : '—' !!}</span>
 
                             <span class="font-semibold">જન્મ તારીખ :</span>
                             <span class="font-medium">
