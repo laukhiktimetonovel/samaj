@@ -13,26 +13,26 @@ class AdvertisementSeeder extends Seeder
      */
     public function run(): void
     {
-        // Advertisement::create([
-        //     'title' => 'Ad 1',
-        //     'image_path' => 'images/160 × 600.png',
-        //     'url' => '#',
-        //     'is_active' => true,
-        // ]);
+        Advertisement::create([
+            'title' => 'Ad 1',
+            'image_path' => 'images/160 × 600.png',
+            'url' => '#',
+            'is_active' => true,
+        ]);
 
-        // Advertisement::create([
-        //     'title' => 'Ad 2',
-        //     'image_path' => 'images/160 × 600 (1).png',
-        //     'url' => '#',
-        //     'is_active' => true,
-        // ]);
+        Advertisement::create([
+            'title' => 'Ad 2',
+            'image_path' => 'images/160 × 600 (1).png',
+            'url' => '#',
+            'is_active' => true,
+        ]);
 
-        // Advertisement::create([
-        //     'title' => 'Ad 3',
-        //     'image_path' => 'images/160 × 600.png',
-        //     'url' => '#',
-        //     'is_active' => true,
-        // ]);
+        Advertisement::create([
+            'title' => 'Ad 3',
+            'image_path' => 'images/160 × 600.png',
+            'url' => '#',
+            'is_active' => true,
+        ]);
 
         Advertisement::create([
             'title' => 'Ad 1',
