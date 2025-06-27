@@ -1,19 +1,19 @@
-self.addEventListener('install', (event) => {
+self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open('v1').then((cache) => {
+    caches.open('laravel-pwa-cache').then(cache => {
       return cache.addAll([
         '/',
-        '/css/style.css', // Adjust paths to your assets
-        '/js/script.js',
-        '/images/icon-192x192.png'
+        '/css/app.css',
+        '/js/app.js',
+        // add any other assets you want cached
       ]);
     })
   );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
+    caches.match(event.request).then(response => {
       return response || fetch(event.request);
     })
   );
