@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 
 
 
+// Route::middleware('auth:admin')->group(function(){
+//      Route::resource('admin/members', MemberController::class)
+//           ->only(['index','create','store']);
+// });
 Route::resource('admin/members', MemberController::class)
-     ->only(['index','create','store']);
-
+    ->only(['index', 'create', 'store'])
+    ->middleware('auth.basic');
      
 Route::get('/banner', [BannerController::class, 'index'])->name('banner');
 Route::get('/banner/close', [BannerController::class, 'close'])->name('banner.close');
