@@ -6,9 +6,9 @@
     <link rel="manifest" href="{{ asset('manifest.json') }}">
     <meta name="theme-color" content="#575228" />
     <title>તળપદા કોળી પટેલ સમાજ</title>
-    <link rel="icon" href="{{ asset('images/logo.png') }}">
+    <link rel="icon" href="{{ asset('images/logo.png') }}"> 
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@100..800&display=swap" rel="stylesheet">
 
     @vite('resources/css/app.css')
@@ -29,7 +29,7 @@
         @include('components.advataizment')
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
 
     @stack('scripts')

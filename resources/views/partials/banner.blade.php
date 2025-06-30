@@ -73,7 +73,6 @@
 @endsection
 
 
-
 @push('scripts')
     <script>
         // Initialize Swiper
@@ -93,12 +92,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             const modal = document.getElementById('splashModal');
             modal.classList.remove('hidden');
-        });
-
-        // Close modal on close button click
-        document.getElementById('splashClose').addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('splashModal').classList.add('hidden');
         });
     </script>
 @endpush

@@ -1,7 +1,7 @@
 {
-  "name": "Samaj",
-  "short_name": "App",
-  "start_url": "/",
+  "name": "Talpada Koli Patel Samaj",
+  "short_name": "Talpada Koli Patel Samaj",
+  "start_url": "/?show_banner=true",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#575228",
