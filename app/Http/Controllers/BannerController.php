@@ -19,6 +19,7 @@ class BannerController extends Controller
 
         // Get intended URL from session or default to home
         $intendedUrl = $request->session()->pull('intended_url', route('home'));
+        $intendedUrl = preg_replace('/\?show_banner=true/', '', $intendedUrl);
 
         return redirect($intendedUrl);
     }
