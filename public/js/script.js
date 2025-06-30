@@ -50,14 +50,6 @@
 //   }
 // })
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(registration => console.log('Service Worker registered:', registration))
-      .catch(err => console.log('Service Worker registration failed:', err));
-  });
-} 
-
 // Check if device is mobile
 const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
 
@@ -100,4 +92,13 @@ const initializeSwiper = (selector) => {
 
 // Initialize Swipers for all defined selectors
 ['.mobile-ads', '.desktop-ads'].forEach(initializeSwiper);
+
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(registration => console.log('Service Worker registered:', registration))
+      .catch(err => console.log('Service Worker registration failed:', err));
+  });
+} 
 
