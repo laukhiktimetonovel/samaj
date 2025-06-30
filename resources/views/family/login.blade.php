@@ -8,7 +8,7 @@
       <div class="text-green-600">{{ session('status') }}</div>
     @endif
 
-    <form action="{{ route('family.login') }}" method="POST" id="login-form" class="space-y-2">
+    <form action="{{ route('family.login') }}" method="POST" id="login-form" class="space-y-2 bg-white p-4 md:p-6 shadow rounded-xl">
       @csrf
       <label class="block text-gray-700 font-semibold">લોગિન માટે મોબાઈલ નંબર અને પાસવર્ડ દાખલ કરો:</label>
       <div class="flex flex-col sm:flex-row gap-3">
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="flex justify-end">
-        <button type="submit" class="bg-[#575228] text-white px-5 py-2 rounded-[12px]">Login</button>
+        <button type="submit" class="bg-[#575228] text-white px-5 py-2 rounded-[12px]">લોગિન કરો</button>
       </div>
     </form>
   </div>

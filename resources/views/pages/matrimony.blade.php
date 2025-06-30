@@ -7,21 +7,21 @@
     </h2>
     <div class="max-w-full space-y-4">
         <!-- Search Form -->
-        <form action="{{ route('pages.matrimony') }}" method="GET" class="space-y-2 max-w-[60%]" id="matrimony-form">
+        <form action="{{ route('pages.matrimony') }}" method="GET" class="bg-white p-4 md:p-6 shadow rounded-xl space-y-3 max-w-4xl" id="matrimony-form">
             <input type="hidden" name="search" value="1">
-            <div class="flex flex-col sm:flex-row gap-3 items-end">
+            <div class="flex flex-col sm:flex-row gap-4 items-start">
                 <!-- Age From -->
                 <div class="w-full">
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
                         ઉંમર (થી)
                     </label>
                     <select name="age_from" id="age_from" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
-                        <option value="">-- Select Age --</option>
+                        <option value="">-- ઉંમર પસંદ કરો --</option>
                         @for ($i = 18; $i <= 60; $i++)
                             <option value="{{ $i }}" {{ request('age_from') == $i ? 'selected' : '' }}>{{ $i }}</option>
                         @endfor
                     </select>
-                    <p class="error text-red-500 text-sm mt-1 hidden" id="age_from_error"></p>
+                    <p class="error text-red-500 text-sm mt-1.5 hidden" id="age_from_error"></p>
                 </div>
 
                 <!-- Age To -->
@@ -30,12 +30,12 @@
                         ઉંમર (સુધી)
                     </label>
                     <select name="age_to" id="age_to" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
-                        <option value="">-- Select Age --</option>
+                        <option value="">-- ઉંમર પસંદ કરો --</option>
                         @for ($i = 18; $i <= 60; $i++)
                             <option value="{{ $i }}" {{ request('age_to') == $i ? 'selected' : '' }}>{{ $i }}</option>
                         @endfor
                     </select>
-                    <p class="error text-red-500 text-sm mt-1 hidden" id="age_to_error"></p>
+                    <p class="error text-red-500 text-sm mt-1.5 hidden" id="age_to_error"></p>
                 </div>
 
                 <!-- Gender -->
@@ -44,45 +44,47 @@
                         જાતિ
                     </label>
                     <select id="gender" name="gender" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
-                        <option value="">-- Select Gender --</option>
+                       <option value="">-- લિંગ પસંદ કરો --</option>
                         <option value="પુરુષ" {{ request('gender') == 'પુરુષ' ? 'selected' : '' }}>પુરુષ</option>
                         <option value="સ્ત્રી" {{ request('gender') == 'સ્ત્રી' ? 'selected' : '' }}> મહિલા</option>
                     </select>
-                    <p class="error text-red-500 text-sm mt-1 hidden" id="gender_error"></p>
-                </div>
-
-                <!-- Submit Button -->
-                <div>
-                    <button type="submit" class="bg-[#575228] text-white px-6 py-3 rounded-[12px] transition">
-                        Search
-                    </button>
+                    <p class="error text-red-500 text-sm mt-1.5 hidden" id="gender_error"></p>
                 </div>
             </div>
+            <!-- Submit Button -->
+            <button type="submit" class="bg-[#575228] text-white px-6 py-3 rounded-[12px] transition cursor-pointer mt-2">
+                શોધો
+            </button>
         </form>
 
         <!-- Parents and Filtered Children (Show only after form submission) -->
         @if ($parents !== null)
-            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
                 @forelse ($parents as $parent)
-                    <div class="bg-gradient-to-br from-pink-100 via-red-100 to-yellow-100 border border-pink-300 rounded-2xl shadow-xl p-5 w-full max-w-md mx-auto space-y-4">
+                    <div class="bg-gradient-to-br from-pink-100 via-red-100 to-yellow-100 border border-pink-300 rounded-2xl shadow-xl p-3 sm:p-5 w-full space-y-4 flex flex-col h-full">
                         <!-- Parent's Name -->
-                        <h2 class="text-2xl font-extrabold text-pink-800 tracking-wide">
+                        <h2 class="text-lg sm:text-2xl font-extrabold text-pink-800 tracking-wide">
                             {{ $parent->full_name }}
                         </h2>
 
                         <!-- Filtered Children -->
                         @if ($parent->children->isNotEmpty())
-                            <div class="ml-3 border-l-4 border-pink-400 pl-4 space-y-2 mt-2">
+                            <div class="space-y-2 mt-2 flex-1">
                                 @foreach ($parent->children as $child)
-                                    <p class="text-base text-gray-800 flex items-start">
+                                <div class="flex items-center gap-2 border-pink-400 pl-2.5 sm:pl-4 border-l-2 sm:border-l-4">
+                                    <p class="text-sm sm:text-base text-gray-800 flex items-start">
                                         <span class="text-pink-600 mr-2">➤</span> {{ $child->full_name }}
                                     </p>
+                                    <p class="text-sm sm:text-base text-gray-800 flex items-start">
+                                        <span class="text-pink-600 mr-2">➤</span> ઉંમર - {{ $child->age }} વર્ષ
+                                    </p>
+                                </div>
                                 @endforeach
                             </div>
                         @endif
 
                         <!-- Contact Info (Parent's) -->
-                        <div class="pt-3 border-t border-pink-300 text-sm text-gray-800 grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-4">
+                        <div class="pt-3 border-t border-pink-300 text-sm text-gray-800 flex justify-between gap-4">
                             <!-- Mobile Number -->
                             <div class="flex items-center space-x-2">
                                 <span class="text-pink-600 text-lg">📞</span>
@@ -97,9 +99,9 @@
                         </div>
                     </div>
                 @empty
-                    <div class="col-span-full text-left text-gray-600">
-                        ⚠︎ યોગ્ય સભ્યો મળ્યા નથી.
-                    </div>
+                <div class="col-span-full text-left text-red-500">
+                    ⚠︎ યોગ્ય સભ્યો મળ્યા નથી.
+                </div>
                 @endforelse
             </div>
         @endif

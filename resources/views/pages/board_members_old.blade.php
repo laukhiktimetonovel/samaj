@@ -22,7 +22,7 @@
                     <div class="flex-col gap-1 flex flex-1">
                         <h2 class="font-semibold md:font-bold sm:text-lg flex-1">{{ $member->name }}</h2>
                         <p class="text-[#575228] text-sm">{{ $member->role }}</p>
-                        <p>Mo: {{ $member->phone }}</p>
+                        <p>મોબાઈલ નંબર: {{ $member->phone }}</p>
                     </div>
                 </div>
             @endforeach

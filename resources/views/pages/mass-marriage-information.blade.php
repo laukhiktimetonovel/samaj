@@ -20,7 +20,6 @@
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
                 <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-400">
-
                     <p class="text-[#575228] md:text-xl font-semibold">
                         શ્રી પટેલ માઘવલાલ રામજીદાસ 
                     </p>

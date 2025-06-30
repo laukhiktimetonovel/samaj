@@ -14,26 +14,6 @@
                     શ્રી પટેલ માઘવલાલ રામજીદાસ 
                 </p>
             </div>
-
-             <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-400">
-                <span class="text-[#575228] text-[15px] font-semibold">
-                    પ્રથમ સ્નેહમિલન સમારંભ - ૧૯૯૩
-                </span>
-                <p class="xl:text-xl font-semibold">
-                    શ્રી પટેલ માઘવલાલ રામજીદાસ 
-                </p>
-            </div>
-
-             <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-400">
-                <span class="text-[#575228] text-[15px] font-semibold">
-                    પ્રથમ સ્નેહમિલન સમારંભ - ૧૯૯૩
-                </span>
-                <p class="xl:text-xl font-semibold">
-                    શ્રી પટેલ માઘવલાલ રામજીદાસ 
-                </p>
-            </div>
-
-
              <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-400">
                 <span class="text-[#575228] text-[15px] font-semibold">
                     પ્રથમ સ્નેહમિલન સમારંભ - ૧૯૯૩
@@ -106,8 +86,22 @@
                     શ્રી પટેલ માઘવલાલ રામજીદાસ 
                 </p>
             </div>
-            
-            
+             <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-400">
+                <span class="text-[#575228] text-[15px] font-semibold">
+                    પ્રથમ સ્નેહમિલન સમારંભ - ૧૯૯૩
+                </span>
+                <p class="xl:text-xl font-semibold">
+                    શ્રી પટેલ માઘવલાલ રામજીદાસ 
+                </p>
+            </div>
+             <div class="bg-white rounded-[12px] p-4 md:p-6 flex flex-col gap-2 border border-gray-400">
+                <span class="text-[#575228] text-[15px] font-semibold">
+                    પ્રથમ સ્નેહમિલન સમારંભ - ૧૯૯૩
+                </span>
+                <p class="xl:text-xl font-semibold">
+                    શ્રી પટેલ માઘવલાલ રામજીદાસ 
+                </p>
+            </div>
         </div>
     </div>
 @endsection

@@ -17,7 +17,7 @@
         </div>
 
         <!-- Info -->
-        <div class="col-span-2 space-y-2 text-gray-700">
+        <div class="col-span-2 space-y-2">
             <div class="grid grid-cols-2 gap-4">
                 <span class="font-semibold">સભ્ય નં :</span>
                 <span class="font-bold">{{ $member->id }}</span>
@@ -26,7 +26,7 @@
                 <span class="font-bold">{{ $member->full_name }} ({{ $member->village_name }})</span>
 
                 <span class="font-semibold">મોબાઈલ નંબર :</span>
-                <span class="font-medium"><img src="{{ number_to_image($member->mobile) ?? '—' }}" /></span>
+                <span><img src="{{ number_to_image($member->mobile) ?? '—' }}" class="max-w-[170px]" /></span>
 
                 <span class="font-semibold">જન્મ તારીખ :</span>
                 <span class="font-medium">
@@ -67,15 +67,17 @@
     </div>
 
     <!-- Divider & Family Members -->
-    <div class="border-t mt-6 pt-4">
-        <h2 class="text-xl font-semibold text-center text-gray-800 mb-4">ઘરના સદસ્ય</h2>
+    <div class="mt-6 pt-4">
+        <h2 class="text-xl font-semibold text-center text-gray-800 flex items-center whitespace-nowrap mb-6 gap-3">
+           <span class="w-full block h-[1px] bg-gray-600"></span> ઘરના સદસ્ય <span class="w-full block h-[1px] bg-gray-600"></span>
+        </h2>
 
         @if($children->isEmpty())
             <p class="text-center text-gray-600">⚠︎ સભ્ય ઉમેરેલા નથી</p>
         @else
             <div class="space-y-4">
                 @foreach($children as $child)
-                    <div class="bg-white shadow p-4 md:p-6 rounded-xl text-[15px] grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                    <div class="bg-white shadow p-4 md:p-6 rounded-xl text-[15px] grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="grid grid-cols-2 gap-2">
                             <span class="font-semibold">નામ :</span>
                             <span class="font-bold">{{ $child->full_name }} ({{ $child->parent->village_name }})</span>
@@ -84,7 +86,7 @@
                             <span class="font-medium">{{ $child->relation }}</span>
 
                             <span class="font-semibold">મોબાઈલ નંબર :</span>
-                            <span class="font-medium">{!! $child->mobile ? '<img src="' . number_to_image($child->mobile) . '">' : '—' !!}</span>
+                            <span>{!! $child->mobile ? '<img src="' . number_to_image($child->mobile) . '" class="max-w-[170px]">' : '—' !!}</span>
 
                             <span class="font-semibold">જન્મ તારીખ :</span>
                             <span class="font-medium">

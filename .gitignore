@@ -22,3 +22,4 @@ yarn-error.log
 /.zed
 postcss1.config.cjs
 postcss.config.cjs
+/public/service-worker.js

@@ -28,7 +28,9 @@
         </a>
     </div>
     {{-- Family Members List --}}
-    <h2 class="font-semibold text-xl md:text-2xl text-[#575228] mt-3">ઘરના સદસ્ય</h2>
+    <h2 class="font-semibold text-xl md:text-2xl text-[#575228] mt-3">
+      <hr>  ઘરના સદસ્ય <hr>
+    </h2>
     <p class="mt-1 text-red-600">નોંધ: સભ્યનું નામ પકડીને ડ્રેગ હેન્ડલ (બાજુનું આઇકન) વડે તેનો ક્રમ ઉપર કે નીચે કરી શકો છો. ક્રમ બદલ્યા પછી ફેરફાર સેવ કરવા સેવ નું બટન દબાવવું.</p>
     <form action="{{ route('family.profile.order') }}" method="POST" class="mt-4">
         @csrf
