@@ -84,7 +84,7 @@
 
         <a href="{{ route('login') }}" data-match="add-users.php" class="page-menu bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-1.5 px-1.5 {{ in_array(request()->route()->getName(),['login']) ? 'page-active' : ''}}">
             <img src="{{ asset('images/icons/add-users.svg') }}" alt="add-users" loading="lazy" class="min-h-[30px] md:min-h-[40px] max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
-            <span class="font-medium text-xs md:text-[14px] sidebar-text">login karo</span>
+            <span class="font-medium text-xs md:text-[14px] sidebar-text">લોગીન કરો</span>
         </a>
 
         <a href="{{ route('members.report') }}" data-match="report-of-members.php" class="page-menu bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-1.5 px-1.5 {{ request()->route()->getName() == "members.report" ? 'page-active' : ''}}">
