@@ -20,6 +20,11 @@ class CheckBanner
         if ($request->is('banner') || $request->is('banner/close')) {
             return $next($request);
         }
+
+        if ($request->query('show_banner') === 'true') {
+            $request->session()->put('intended_url', $request->fullUrl());
+            return redirect()->route('banner');
+        }
         
         // Check if banner_seen cookie exists
         if (Cookie::get('banner_seen')) {
