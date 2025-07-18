@@ -7,7 +7,7 @@
     </h2>
     <div class="max-w-full space-y-4">
         <!-- Search Form -->
-        <form action="{{ route('pages.product-report') }}" method="GET" class="space-y-2 max-w-xl" id="product-search-form">
+        <form action="{{ route('pages.product-report') }}" method="GET" class="bg-white p-4 md:p-6 shadow rounded-xl space-y-3 max-w-2xl" id="product-search-form">
             <label class="block text-gray-700 font-semibold text-sm md:text-base">
                 પાક શોધવા માટે પાક પસંદ કરો:
             </label>
@@ -57,9 +57,8 @@
                 @endforelse
             </div>
         @endif
-    </div>
+    </div>  
 </div>
-
 @push('scripts')
 <script>
     document.getElementById('product-search-form').addEventListener('submit', function(event) {

@@ -21,7 +21,7 @@
 
         <a href="{{ route('board.index','board_members') }}" data-match="board-users.php" class="page-menu bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-1.5 px-1.5 {{ request()->route()->getName() == "board.index" ? 'page-active' : ''}}">
             <img src="{{ asset('images/icons/board-users.svg') }}" alt="board-users" loading="lazy" class="min-h-[30px] md:min-h-[40px] max-w-[30px] max-h-[30px] md:max-h-[40px] md:max-w-[40px] object-contain" />
-            <span class="font-medium text-xs md:text-[14px] sidebar-text">મંડળના હોદ્દારોઃ</span>
+            <span class="font-medium text-xs md:text-[14px] sidebar-text">સમાજના મંડળો</span>
         </a>
 
         <a href="{{ route('pages.snehmilan-information') }}" data-match="snehmilan-information.php" class="page-menu bg-white border shadow-[0px_6px_10px_5px_#dcdcdc2b] rounded-[10px] border-solid border-[#dfdfdf] flex items-center justify-center flex-col text-center cursor-pointer gap-2 md:gap-3.5 md:py-3 py-1.5 px-1.5 {{ request()->route()->getName() == "pages.snehmilan-information" ? 'page-active' : ''}}">

@@ -51,27 +51,3 @@ input[type="radio"]:checked + span {
     background-repeat: no-repeat;
    background-position: 97% 50%;
 }
-.swiper-pagination-bullet {
-    width: 12px;
-    height: 3px;
-    background: #ffffff;
-    border-radius: 0;
-    opacity: 0.5;
-}
-.swiper-pagination-bullet-active {
-    background: #ffffff;
-    opacity: 1;
-}
-body .swiper-pagination {
-    position: absolute;
-    bottom: -3px    ;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding-top: 2px;
-}
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-    bottom: -3px;
-    left: 0;
-    width: 100%;
-}

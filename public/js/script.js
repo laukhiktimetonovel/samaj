@@ -72,26 +72,26 @@ window.addEventListener('load', () => {
 });
 
 // Initialize Swiper on a given selector
-const initializeSwiper = (selector) => {
-  const element = document.querySelector(selector);
-  if (!element) return;
+const initializeTinySlider = (selector) => {
+        const sliderContainer = document.querySelector(selector + ' .tiny-slider');
+        if (!sliderContainer) return;
 
-  new Swiper(selector, {
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    loop: true,
-    pagination: {
-      el: `${selector} .swiper-pagination`,
-      clickable: true,
-      type: 'bullets',
-    },
-  });
-};
+        tns({
+            container: sliderContainer,
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: true,
+            loop: true,
+            gutter: 10,
+            mouseDrag: true, // 👈 Enable mouse dragging
+        });
+    };
 
-// Initialize Swipers for all defined selectors
-['.mobile-ads', '.desktop-ads'].forEach(initializeSwiper);
+    ['.mobile-ads-slider', '.desktop-ads-slider'].forEach(initializeTinySlider);
 
 
 if ('serviceWorker' in navigator) {

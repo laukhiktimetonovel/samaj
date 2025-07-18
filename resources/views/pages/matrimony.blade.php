@@ -15,7 +15,7 @@
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
                         ઉંમર (થી)
                     </label>
-                    <select name="age_from" id="age_from" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
+                    <select name="age_from" id="age_from" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none focus:border-[#575228]">
                         <option value="">-- ઉંમર પસંદ કરો --</option>
                         @for ($i = 18; $i <= 60; $i++)
                             <option value="{{ $i }}" {{ request('age_from') == $i ? 'selected' : '' }}>{{ $i }}</option>
@@ -29,7 +29,7 @@
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
                         ઉંમર (સુધી)
                     </label>
-                    <select name="age_to" id="age_to" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
+                    <select name="age_to" id="age_to" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none focus:border-[#575228]">
                         <option value="">-- ઉંમર પસંદ કરો --</option>
                         @for ($i = 18; $i <= 60; $i++)
                             <option value="{{ $i }}" {{ request('age_to') == $i ? 'selected' : '' }}>{{ $i }}</option>
@@ -43,7 +43,7 @@
                     <label class="block text-gray-700 font-semibold text-sm md:text-base mb-2">
                         જાતિ
                     </label>
-                    <select id="gender" name="gender" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none  focus:border-[#575228]">
+                    <select id="gender" name="gender" class="select-option w-full px-5 py-3 border border-gray-400 rounded-[12px] focus:outline-none focus:border-[#575228]">
                        <option value="">-- લિંગ પસંદ કરો --</option>
                         <option value="પુરુષ" {{ request('gender') == 'પુરુષ' ? 'selected' : '' }}>પુરુષ</option>
                         <option value="સ્ત્રી" {{ request('gender') == 'સ્ત્રી' ? 'selected' : '' }}> મહિલા</option>
@@ -56,7 +56,6 @@
                 શોધો
             </button>
         </form>
-
         <!-- Parents and Filtered Children (Show only after form submission) -->
         @if ($parents !== null)
             <div class="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
@@ -90,7 +89,6 @@
                                 <span class="text-pink-600 text-lg">📞</span>
                                 <span class="font-medium text-[16px]">{{ $parent->mobile ?? '—' }}</span>
                             </div>
-
                             <!-- Address -->
                             <div class="flex items-start space-x-2">
                                 <span class="text-yellow-600 text-lg">📍</span>
@@ -109,10 +107,9 @@
 </div>
 @endsection
 
-
 @push('scripts')
 <script>
-        console.log("called");
+    console.log("called");
     document.getElementById('matrimony-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
         console.log("called");
